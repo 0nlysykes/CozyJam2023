@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6207383797615922431}
   - component: {fileID: 6207383797615922426}
   - component: {fileID: 6207383797615922429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ScareStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
