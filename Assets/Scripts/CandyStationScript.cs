@@ -89,7 +89,6 @@ public class CandyStationScript : MonoBehaviour
     }
 
     public void targetingAreaCollisionEnter(Collider2D other){
-        Debug.Log("BEEEPBEEPBEEPBEEP");
         if(other.gameObject.tag == "Enemy"){     
             enemies.Add(other.transform);
             targetsLocated = true;
@@ -123,12 +122,10 @@ public class CandyStationScript : MonoBehaviour
 
     // when the player mouses over the turret they should get to see the area of effect
     private void OnMouseEnter() {
-        Debug.Log("Found your mouse");
         gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     private void OnMouseExit() {
-        Debug.Log("Goodbye your mouse");
         gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 
