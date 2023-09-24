@@ -7,6 +7,7 @@ public class EnemyScript : MonoBehaviour
 
     // Waypoints properties
     public GameObject Waypoints;
+    public GameObject DefeatedWaypoint;
     private int waypointsListSize = 0;
     private int waypointIndex = 0; // to keep track of which waypoint the enemy is on
     private int finalwaypointIndex;
@@ -71,8 +72,15 @@ public class EnemyScript : MonoBehaviour
         //track the enemey progression along the path
         progression += Time.deltaTime * enemySpeed;
 
-        //physically move the enemy along the path
-        ProgressEnemy();
+        if (enemyHealth > 0)
+        {
+            //physically move the enemy along the path
+            ProgressEnemy();
+        } else
+        {
+            EnemyExit();
+        }
+        
     }
 
     public void takeDamage(int damagetoTake)
@@ -80,25 +88,16 @@ public class EnemyScript : MonoBehaviour
         enemyHealth -= damagetoTake;
 
         //check for death. Fade if health reaches 0
-        StartCoroutine(FadeTo(0, 5)); //fades in five seconds
+        if(enemyHealth <= 0)
+        {
+            progression = 0;
+            StartCoroutine(FadeTo(0, 5)); //fades in five seconds
+        }
     }
 
     private void EnemyExit()
     {
-        // check if the enemy has reached the final waypoint
-        if (waypointIndex <= finalwaypointIndex)
-        {
-            //move the enemy in stages (by a factor of its speed times the amount of time elapsed for this current frame
-            transform.position = Vector2.MoveTowards(transform.position, childWayPoints[waypointIndex].transform.position, enemySpeed * Time.deltaTime);
-
-            //Check whether the enemy has reached the next waypoint
-            if (transform.position == childWayPoints[waypointIndex].transform.position)
-            {
-                waypointIndex++;
-            }
-
-        }
-        //draw a line between current waypoint and next waypoint
+        transform.position = Vector2.MoveTowards(transform.position, DefeatedWaypoint.transform.position, enemySpeed * Time.deltaTime);
     }
 
     IEnumerator FadeTo(float desiredAlpha, float desiredTime)
@@ -111,11 +110,7 @@ public class EnemyScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
             yield return null;
         }
-        if (newColor.a > 0 && desiredAlpha == 0)
-        {
-            newColor.a = 0;
-            gameObject.GetComponent<SpriteRenderer>().color = newColor;
-        }
+        Destroy(this); // destroy the enemy as soon as it has faded completely
     }
 
     public IEnumerator slowDown(){

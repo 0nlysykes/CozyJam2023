@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawns : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject DefeatedWaypoint;
     public GameObject WaypointsParent;
     public float totalRoundTime;
     private float SpawnTimer = 0f;
@@ -30,6 +31,9 @@ public class EnemySpawns : MonoBehaviour
         SmallChild.gameObject.GetComponent<EnemyScript>().Waypoints = WaypointsParent;
         Teenager.gameObject.GetComponent<EnemyScript>().Waypoints = WaypointsParent;
         PillowsackKid.gameObject.GetComponent<EnemyScript>().Waypoints = WaypointsParent;
+        SmallChild.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
+        Teenager.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
+        PillowsackKid.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
     }
 
     // Update is called once per frame

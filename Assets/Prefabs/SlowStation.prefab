@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 5237337568963080613}
   - component: {fileID: 5237337568963080600}
   - component: {fileID: 5237337568963080601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlowStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
