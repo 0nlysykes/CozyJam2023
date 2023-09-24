@@ -28,6 +28,8 @@ public class EnemySpawns : MonoBehaviour
     void Start()
     {
         SmallChild.gameObject.GetComponent<EnemyScript>().Waypoints = WaypointsParent;
+        Teenager.gameObject.GetComponent<EnemyScript>().Waypoints = WaypointsParent;
+        PillowsackKid.gameObject.GetComponent<EnemyScript>().Waypoints = WaypointsParent;
     }
 
     // Update is called once per frame
@@ -45,7 +47,7 @@ public class EnemySpawns : MonoBehaviour
 
     private void SpawnTime() //example time interval is 2 seconds and total round time is 50 sec
     {
-        if(x < totalRoundTime + smallTimeInterval) //check to assure that the round time has not elapsed
+        if(SpawnTimer <= totalRoundTime + 1) //check to assure that the round time has not elapsed with an extra second to account for last second spawns
         {
             // spawn check for small kids
             if (SpawnTimer >= smallTimeInterval * x)
@@ -57,13 +59,13 @@ public class EnemySpawns : MonoBehaviour
             if (SpawnTimer >= teenTimeInterval * y)
             {
                 GameObject teenager = Instantiate(Teenager, new Vector2(0, 0), Quaternion.identity);
-                x++; // this variable keeps track of intervals passed
+                y++; // this variable keeps track of intervals passed
             }
             // spawn check for pillowsack kids
             if (SpawnTimer >= pillowsackTimeInterval * z)
             {
                 GameObject pillowsackKid = Instantiate(PillowsackKid, new Vector2(0, 0), Quaternion.identity);
-                x++; // this variable keeps track of intervals passed
+                z++; // this variable keeps track of intervals passed
             }
         }
     }
