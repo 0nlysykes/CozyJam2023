@@ -50,10 +50,13 @@ public class CandyStationScript : MonoBehaviour
         //  -child does animation of getting candy
         //  -sound plays?
         //  -if child is satisfied short particle effect, sound effect, and child walks off the path and fades out
-        ammo -= 1;
-        StartCoroutine(activationAnimation());
-        currentTarget.gameObject.GetComponent<EnemyScript>().takeDamage(damage);
-        timer = 0;
+        
+        if(currentTarget.gameObject.GetComponent<EnemyScript>().enemyHealth > 0){
+            ammo -= 1;
+            StartCoroutine(activationAnimation());
+            currentTarget.gameObject.GetComponent<EnemyScript>().takeDamage(damage);
+            timer = 0;
+        }
     }
 
     void setTarget(){
