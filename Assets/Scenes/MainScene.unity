@@ -626,7 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefeatedWaypoint: {fileID: 370249533}
   WaypointsParent: {fileID: 1715932842}
-  totalRoundTime: 10
+  totalRoundTime: 50
   elapsedTime: 0
   SmallChild: {fileID: 270746356926377324, guid: b08f6da6eb71cfa49bdfe2b22c73c395, type: 3}
   smallTimeInterval: 2

@@ -25,7 +25,7 @@ public class EnemySpawns : MonoBehaviour
     public GameObject PillowsackKid;
     public float pillowsackTimeInterval;
     private float z = 1;
-    
+
     void Start()
     {
         SmallChild.gameObject.GetComponent<EnemyScript>().Waypoints = WaypointsParent;
@@ -34,6 +34,12 @@ public class EnemySpawns : MonoBehaviour
         SmallChild.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
         Teenager.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
         PillowsackKid.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
+
+        // this will make all the waypoints on the path invisisble
+        foreach (Transform child in WaypointsParent.transform)
+        {
+            child.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -51,7 +57,7 @@ public class EnemySpawns : MonoBehaviour
 
     private void SpawnTime() //example time interval is 2 seconds and total round time is 50 sec
     {
-        if(SpawnTimer <= totalRoundTime + 1) //check to assure that the round time has not elapsed with an extra second to account for last second spawns
+        if (SpawnTimer <= totalRoundTime + 1) //check to assure that the round time has not elapsed with an extra second to account for last second spawns
         {
             // spawn check for small kids
             if (SpawnTimer >= smallTimeInterval * x)
@@ -73,4 +79,6 @@ public class EnemySpawns : MonoBehaviour
             }
         }
     }
+
+
 }
