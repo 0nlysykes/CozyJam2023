@@ -17,6 +17,7 @@ public class EnemyScript : MonoBehaviour
     public float progression = 0f;
     public float enemySpeed;
     public int enemyHealth;
+    private bool slowed = false;
     //
 
     //private Transform[] childWaypoints;
@@ -115,6 +116,16 @@ public class EnemyScript : MonoBehaviour
             newColor.a = 0;
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
         }
+    }
+
+    public IEnumerator slowDown(){
+        if(!slowed){
+            enemySpeed = enemySpeed * .6f;
+        }
+        gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+        yield return new WaitForSeconds(5);
+        enemySpeed = enemySpeed / .6f;
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     // Update is called once per frame
