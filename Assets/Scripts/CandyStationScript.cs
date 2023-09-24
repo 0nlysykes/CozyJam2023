@@ -35,8 +35,6 @@ public class CandyStationScript : MonoBehaviour
         if(timer > 1/fireRate && targetsLocated && ammo > 0){
             // take aim at child that is furthest forward
             setTarget();
-            // deliver delicious candy to targeted child
-            candyAttack();
         }
     }
 
@@ -46,7 +44,14 @@ public class CandyStationScript : MonoBehaviour
         //  -ammo decrements by one
         //  -damage is dealt to currentTarget
         //  -timer is reset
+
+        // how to show player it is doing that
+        //  -machine does animation of giving candy
+        //  -child does animation of getting candy
+        //  -sound plays?
+        //  -if child is satisfied short particle effect, sound effect, and child walks off the path and fades out
         ammo -= 1;
+        StartCoroutine(activationAnimation());
         currentTarget.gameObject.GetComponent<EnemyScript>().takeDamage(damage);
         timer = 0;
     }
@@ -76,25 +81,64 @@ public class CandyStationScript : MonoBehaviour
                     }
                 }
             }
+            // attack target with the candy ... I mean deliver delicious candy to targeted child
+            candyAttack();
         } else {
             targetsLocated = false;
         }
     }
 
-    // Add enemy to list of enemies in range
-    private void OnTriggerEnter2D(Collider2D other) {
+    public void targetingAreaCollisionEnter(Collider2D other){
+        Debug.Log("BEEEPBEEPBEEPBEEP");
         if(other.gameObject.tag == "Enemy"){     
             enemies.Add(other.transform);
             targetsLocated = true;
         }
     }
 
-    // Remove enemy from list of enemies in range
-    private void OnTriggerExit2D(Collider2D other) {
+    public void targetingAreaCollisionExit(Collider2D other){
         if(other.transform == currentTarget){
             currentTarget = null;
         }
 
         enemies.Remove(other.transform);
+    }
+    // Add enemy to list of enemies in range
+    // private void OnTriggerEnter2D(Collider2D other) {
+    //     Debug.Log("BEEEPBEEPBEEPBEEP");
+    //     if(other.gameObject.tag == "Enemy"){     
+    //         enemies.Add(other.transform);
+    //         targetsLocated = true;
+    //     }
+    // }
+
+    // Remove enemy from list of enemies in range
+    // private void OnTriggerExit2D(Collider2D other) {
+    //     if(other.transform == currentTarget){
+    //         currentTarget = null;
+    //     }
+
+    //     enemies.Remove(other.transform);
+    // }
+
+    // when the player mouses over the turret they should get to see the area of effect
+    private void OnMouseEnter() {
+        Debug.Log("Found your mouse");
+        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    private void OnMouseExit() {
+        Debug.Log("Goodbye your mouse");
+        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+    }
+
+    // this coroutine is TEMPORARY, and only serves to show that the candy machine is doing something when it fires.
+    //  it will be replaced with actual animation later(tm)
+    IEnumerator activationAnimation(){
+        
+		transform.Find("tempParticles").gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
+        transform.Find("tempParticles").gameObject.SetActive(false);
     }
 }
