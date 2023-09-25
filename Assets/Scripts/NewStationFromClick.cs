@@ -55,8 +55,7 @@ public class NewStationFromClick : MonoBehaviour
     public void SpawnNew(GameObject stationType)
     {
         Vector2 currentPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        CheckForValidCurrency(stationType);
-        if (validCurrency == true) // assure player has enough currency to purchase station
+        if (CheckForValidCurrency(stationType)) // assure player has enough currency to purchase station
         {
             newstation = Instantiate(stationType, currentPosition, Quaternion.identity); //spawn station on the mouse
             spawningStation = true;
@@ -92,7 +91,7 @@ public class NewStationFromClick : MonoBehaviour
         newstation.transform.localPosition = new Vector3(mousePos.x, mousePos.y, 0); // keep following the mouse cursor       
     }
 
-    private void CheckForValidCurrency(GameObject station)
+    private bool CheckForValidCurrency(GameObject station)
     {
         Debug.Log(PlayerCurrency.GetComponent<TMP_Text>().text);
         playerCur = PlayerCurrency.GetComponent<TMP_Text>().text;
@@ -108,12 +107,12 @@ public class NewStationFromClick : MonoBehaviour
         if (moneyValue > stationCost) // check if player has enough currency
         {
             moneyValue = moneyValue - stationCost; // subtract from player currency
-            validCurrency = true;
+            return true;
             UpdateCurrencyUI();
         }
         else
         {
-            validCurrency = false;
+            return false;
         }
     }
 
