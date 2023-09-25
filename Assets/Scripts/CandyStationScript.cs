@@ -50,7 +50,7 @@ public class CandyStationScript : MonoBehaviour
         //  -child does animation of getting candy
         //  -sound plays?
         //  -if child is satisfied short particle effect, sound effect, and child walks off the path and fades out
-        
+        //Debug.Log(enemies.Count);
         if(currentTarget.gameObject.GetComponent<EnemyScript>().enemyHealth > 0){
             ammo -= 1;
             StartCoroutine(activationAnimation());
@@ -93,8 +93,10 @@ public class CandyStationScript : MonoBehaviour
 
     public void targetingAreaCollisionEnter(Collider2D other){
         if(other.gameObject.tag == "Enemy"){     
-            enemies.Add(other.transform);
-            targetsLocated = true;
+            if(other.gameObject.GetComponent<EnemyScript>().enemyHealth > 0){
+                enemies.Add(other.transform);
+                targetsLocated = true;
+            }
         }
     }
 

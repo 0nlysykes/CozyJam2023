@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject Waypoints;
     public GameObject DefeatedWaypoint;
     private int waypointsListSize = 0;
-    private int waypointIndex = 0; // to keep track of which waypoint the enemy is on
+    private int waypointIndex = 1; // to keep track of which waypoint the enemy is on
     private int finalwaypointIndex;
     private List<Transform> childWayPoints = new List<Transform>();
     // 
@@ -30,7 +30,7 @@ public class EnemyScript : MonoBehaviour
         //get the size of waypoints list
         foreach (Transform child in Waypoints.transform)
         {
-            Debug.Log(child.gameObject.name); //debug list out names
+            //Debug.Log(child.gameObject.name); //debug list out names
             waypointsListSize++; //increment waypoint list size
             if (child != null)
             {
@@ -39,8 +39,8 @@ public class EnemyScript : MonoBehaviour
         }
 
         //set starting position then increment to the next waypoint for the ProgressEnemy function
-        transform.position = childWayPoints[waypointIndex].transform.position;
-        waypointIndex++;
+        //transform.position = childWayPoints[waypointIndex].transform.position;
+        //waypointIndex++;
 
         //grab final waypoint index
         finalwaypointIndex = childWayPoints.Count - 1;
@@ -110,17 +110,25 @@ public class EnemyScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
             yield return null;
         }
-        Destroy(this); // destroy the enemy as soon as it has faded completely
+        Destroy(gameObject); // destroy the enemy as soon as it has faded completely
     }
 
-    public IEnumerator slowDown(){
+    public void slowDown(){
+        StartCoroutine(SlowCoroutine()); 
+    }
+
+    IEnumerator SlowCoroutine(){
         if(!slowed){
             enemySpeed = enemySpeed * .6f;
+            slowed = true;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
-        gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
-        yield return new WaitForSeconds(5);
-        enemySpeed = enemySpeed / .6f;
-        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(3);
+        if(slowed){
+            enemySpeed = enemySpeed / .6f;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            slowed = false;
+        }
     }
 
     // Update is called once per frame

@@ -15,8 +15,8 @@ public class SlowBombScript : MonoBehaviour
             gameObject.transform.localScale += scaleChange;
         }
         
-        if(timer > 2f){
-            StartCoroutine(FadeTo(0, 1f));
+        if(timer > 1f){
+            StartCoroutine(FadeTo(0, 1.5f));
         }
     }
 
