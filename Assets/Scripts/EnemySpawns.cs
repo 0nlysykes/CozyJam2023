@@ -62,19 +62,19 @@ public class EnemySpawns : MonoBehaviour
             // spawn check for small kids
             if (SpawnTimer >= smallTimeInterval * x)
             {
-                GameObject smallChild = Instantiate(SmallChild, new Vector2(0, 0), Quaternion.identity);
+                GameObject smallChild = Instantiate(SmallChild, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 x++; // this variable keeps track of intervals passed
             }
             // spawn check for teenagers
             if (SpawnTimer >= teenTimeInterval * y)
             {
-                GameObject teenager = Instantiate(Teenager, new Vector2(0, 0), Quaternion.identity);
+                GameObject teenager = Instantiate(Teenager, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 y++; // this variable keeps track of intervals passed
             }
             // spawn check for pillowsack kids
             if (SpawnTimer >= pillowsackTimeInterval * z)
             {
-                GameObject pillowsackKid = Instantiate(PillowsackKid, new Vector2(0, 0), Quaternion.identity);
+                GameObject pillowsackKid = Instantiate(PillowsackKid, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 z++; // this variable keeps track of intervals passed
             }
         }
