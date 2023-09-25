@@ -123,52 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &241062409
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 241062411}
-  - component: {fileID: 241062410}
-  m_Layer: 0
-  m_Name: ScareStationSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &241062410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241062409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 940839097df4bec47b9d0cd33eeb6cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TurretToSpawn: {fileID: 6207383797615922401, guid: a03536e2f2143ec4384521362a64336e, type: 3}
-  PlayerCurrency: {fileID: 0}
---- !u!4 &241062411
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241062409}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8074794, y: -1.3034405, z: -0.056375172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423846156
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,13 +207,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 883228374}
+      - m_Target: {fileID: 770091309}
         m_TargetAssemblyTypeName: NewStationFromClick, Assembly-CSharp
         m_MethodName: SpawnNew
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5237337568963080615, guid: 8ad81a2348e8ca548aa995f0c033433e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -534,6 +488,7 @@ GameObject:
   - component: {fileID: 770091307}
   - component: {fileID: 770091306}
   - component: {fileID: 770091305}
+  - component: {fileID: 770091309}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -626,98 +581,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &883228373
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 883228375}
-  - component: {fileID: 883228374}
-  m_Layer: 0
-  m_Name: SlowStationSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &883228374
+--- !u!114 &770091309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883228373}
+  m_GameObject: {fileID: 770091304}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 940839097df4bec47b9d0cd33eeb6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretToSpawn: {fileID: 5237337568963080615, guid: 8ad81a2348e8ca548aa995f0c033433e, type: 3}
-  PlayerCurrency: {fileID: 0}
---- !u!4 &883228375
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883228373}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8074794, y: -1.3034405, z: -0.056375172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &937793646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937793648}
-  - component: {fileID: 937793647}
-  m_Layer: 0
-  m_Name: CandyStationSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &937793647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937793646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 940839097df4bec47b9d0cd33eeb6cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TurretToSpawn: {fileID: 4689192263834059343, guid: 14d7a7b3deccd484ea114609a7023341, type: 3}
-  PlayerCurrency: {fileID: 0}
---- !u!4 &937793648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937793646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8074794, y: -1.3034405, z: -0.056375172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  CandyStation: {fileID: 4689192263834059343, guid: 14d7a7b3deccd484ea114609a7023341, type: 3}
+  SlowStation: {fileID: 5237337568963080615, guid: 8ad81a2348e8ca548aa995f0c033433e, type: 3}
+  ScareStation: {fileID: 6207383797615922401, guid: a03536e2f2143ec4384521362a64336e, type: 3}
+  PlayerCurrency: {fileID: 663760538}
 --- !u!1 &973618053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,13 +1035,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 937793647}
+      - m_Target: {fileID: 770091309}
         m_TargetAssemblyTypeName: NewStationFromClick, Assembly-CSharp
         m_MethodName: SpawnNew
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4689192263834059343, guid: 14d7a7b3deccd484ea114609a7023341, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1493,13 +1372,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 241062410}
+      - m_Target: {fileID: 770091309}
         m_TargetAssemblyTypeName: NewStationFromClick, Assembly-CSharp
         m_MethodName: SpawnNew
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6207383797615922401, guid: a03536e2f2143ec4384521362a64336e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
