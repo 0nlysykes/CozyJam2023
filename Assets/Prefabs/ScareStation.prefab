@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6207383797615922431}
   - component: {fileID: 6207383797615922426}
   - component: {fileID: 6207383797615922429}
+  - component: {fileID: 778801167461043498}
   m_Layer: 7
   m_Name: ScareStation
   m_TagString: Untagged
@@ -127,6 +128,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isUpgraded: 0
   scareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
+--- !u!114 &778801167461043498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207383797615922401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a86cfa0f82a634495ad495c2656cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 300
 --- !u!1 &6207383799076195279
 GameObject:
   m_ObjectHideFlags: 0

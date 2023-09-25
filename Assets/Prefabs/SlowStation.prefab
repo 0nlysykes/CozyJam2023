@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 5237337568963080613}
   - component: {fileID: 5237337568963080600}
   - component: {fileID: 5237337568963080601}
+  - component: {fileID: 2838723900994554284}
   m_Layer: 7
   m_Name: SlowStation
   m_TagString: Untagged
@@ -228,3 +229,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isUpgraded: 0
   slowBomb: {fileID: 3692693503399732373, guid: 8c40f174860357e469cb115043f6e384, type: 3}
+--- !u!114 &2838723900994554284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5237337568963080615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a86cfa0f82a634495ad495c2656cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 200

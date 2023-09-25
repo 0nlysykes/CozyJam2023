@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4689192263834059338}
   - component: {fileID: 4689192263834059336}
   - component: {fileID: 4689192263834059380}
+  - component: {fileID: 5689475991223456690}
   m_Layer: 7
   m_Name: CandyStation
   m_TagString: Untagged
@@ -128,6 +129,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5689475991223456690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689192263834059343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a86cfa0f82a634495ad495c2656cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 100
 --- !u!1 &4689192263846006877
 GameObject:
   m_ObjectHideFlags: 0
