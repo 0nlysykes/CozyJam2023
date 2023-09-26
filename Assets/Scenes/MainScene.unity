@@ -1450,7 +1450,7 @@ MonoBehaviour:
   WaypointsParent: {fileID: 1715932842}
   totalRoundTime: 50
   elapsedTime: 0
-  SmallChild: {fileID: 270746356926377324, guid: b08f6da6eb71cfa49bdfe2b22c73c395, type: 3}
+  SmallChild: {fileID: 5292229068538705554, guid: 0bda16bf4b378994dabbf0c49b38b10b, type: 3}
   smallTimeInterval: 2
   Teenager: {fileID: 7054090276511594353, guid: 0786e0fd76a138f4a85e83c72b77fe5f, type: 3}
   teenTimeInterval: 6

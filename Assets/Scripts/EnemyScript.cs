@@ -6,6 +6,10 @@ using TMPro;
 public class EnemyScript : MonoBehaviour
 {
 
+    //general properties
+    public Rigidbody2D rb; //grab rigid body
+    public Animator animator; //grab animator
+
     // Waypoints properties
     public GameObject Waypoints;
     public GameObject DefeatedWaypoint;
@@ -22,6 +26,15 @@ public class EnemyScript : MonoBehaviour
     public int pointValue;
     private bool slowed = false;
     //
+
+    //velocity/direction calculation components (used in sprite determination)
+    Vector2 movement;
+    private float startingPositionX = 0;
+    private float startingPositionY = 0;
+    private float currentPositionX = 0;
+    private float currentPositionY = 0;
+    private float velocityX;
+    private float velocityY;
 
     //private Transform[] childWaypoints;
     // Start is called before the first frame update
@@ -71,6 +84,8 @@ public class EnemyScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        determineVelocity();
+
         //track the enemey progression along the path
         progression += Time.deltaTime * enemySpeed;
 
@@ -83,6 +98,26 @@ public class EnemyScript : MonoBehaviour
             EnemyExit();
         }
         
+    }
+
+    private void determineVelocity()
+    {
+        //get current x and y position
+        currentPositionX = gameObject.GetComponent<Rigidbody2D>().position.x;
+        currentPositionY = gameObject.GetComponent<Rigidbody2D>().position.y;
+        //Debug.Log(" position: " + currentPositionX);
+
+        //measure velocity for x and y
+        velocityX = (currentPositionX - startingPositionX) / Time.deltaTime;
+        startingPositionX = currentPositionX; // set new starting position
+        velocityY = (currentPositionY - startingPositionY) / Time.deltaTime;
+        startingPositionY = currentPositionY; // set new starting position
+
+
+        movement = new Vector2(velocityX, velocityY);
+        animator.SetFloat("Horizontal", velocityX);
+        animator.SetFloat("Vertical", velocityY);
+        animator.SetFloat("IsMoving", movement.magnitude);
     }
 
     public void takeDamage(int damagetoTake)
@@ -120,14 +155,23 @@ public class EnemyScript : MonoBehaviour
         StartCoroutine(SlowCoroutine()); 
     }
 
-    IEnumerator SlowCoroutine(){
-        if(!slowed){
+    IEnumerator SlowCoroutine()
+    {
+        bool sad = animator.GetBool("Sad");
+        bool IsSlowed = animator.GetBool("IsSlowed");
+        if (!slowed)
+        {
+            animator.SetBool("Sad", !sad);
+            animator.SetBool("IsSlowed", !IsSlowed);
             enemySpeed = enemySpeed * .6f;
             slowed = true;
             gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
         yield return new WaitForSeconds(3);
-        if(slowed){
+        if(slowed)
+        {
+            animator.SetBool("Sad", sad);
+            animator.SetBool("IsSlowed", IsSlowed);
             enemySpeed = enemySpeed / .6f;
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             slowed = false;
