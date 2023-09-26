@@ -1,0 +1,1543 @@
+fileFormatVersion: 2
+guid: 76f5122bf1b387645971feb8229f21be
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KidAnim_LeftIdle1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 952
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c87ba2f69f261d44a55f1c10c6e0d36
+      internalID: 2023929449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_LeftIdle2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 952
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7d2e7e3705ea847867b1529a89d3ab
+      internalID: -1693523746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_RightIdle1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 952
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a30c0efdd7f4548a22069a2bad4704
+      internalID: -1233836289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_RightIdle2
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 952
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dd99d2a70a0a2468d87221b1e1e17c
+      internalID: 1038973376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_FrontIdle1
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 952
+        width: 77
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8aa5720ee98e649807f400e2c4dae5
+      internalID: -817166542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_FrontIdle2
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 952
+        width: 77
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fce529d23bd08848b1dd07d5ea31ff6
+      internalID: -149118304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_BackIdle1
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 951
+        width: 78
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34e007eba398d44c9a28d3551d24622
+      internalID: 927551662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_BackIdle2
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 952
+        width: 78
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d70e5595d96f1041925c0df589c0159
+      internalID: 1998197205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkDown0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 826
+        width: 78
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af36ea226c47dd46bb37fb5c0f6d046
+      internalID: -951081067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkDown1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 825
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d959ea15d74f4469db054a3e2e3466
+      internalID: -977759310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkDown2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 825
+        width: 77
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0de27acd37a15b4b83a281b6c77ad4c
+      internalID: 501577035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkDown3
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 825
+        width: 78
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876d3e0f55bbe38408944bc27b3727ca
+      internalID: 1602029538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkUp0
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 825
+        width: 77
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650fb9c250421b240ab819e52652f70c
+      internalID: 1432301649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkUp1
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 826
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c717edede50ad84eb19fb0aa143f357
+      internalID: -1009078500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkUp2
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 826
+        width: 79
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0073cce612cfb9a43a2d14bf071777c9
+      internalID: -773428922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkUp03
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 826
+        width: 78
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef25c371c0109a478f2007ed2d645a4
+      internalID: -599364176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 703
+        width: 83
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637bd6bedbbdc1b43b242c35489db9c5
+      internalID: 1340302208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 702
+        width: 83
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fb316cb6afc524084307e01115ced3
+      internalID: 244182054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 702
+        width: 87
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6cf0316cfc311459a96ddaccbf6212
+      internalID: -1183116672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight3
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 702
+        width: 86
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eedd7c4a0ac865144bbe99d575566b2a
+      internalID: -1938147243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight4
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 702
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f1be72b1257b34fb7f2c100763b2f6
+      internalID: 1365369388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight5
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 702
+        width: 84
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1e789b18aabdf4eafb76813fce8315
+      internalID: 524590478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 702
+        width: 84
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d3947dbc47bc3448a15cf1a4029897
+      internalID: 242989468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkRight7
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 702
+        width: 83
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9568e01fc4640a142a1654b075d9b098
+      internalID: -370862724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 566
+        width: 84
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39691152ac4bc5145aeb5cf538d397f8
+      internalID: 331376527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 568
+        width: 84
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a529f6731da89d144ba8f0c1a43d6722
+      internalID: 1533002749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 566
+        width: 82
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90388a42a10e8654a80612c1f9d5178b
+      internalID: 339525642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft3
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 567
+        width: 82
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc15458bba10bd4aa819a217efbf02c
+      internalID: -112428163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft4
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 567
+        width: 82
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b44c5ebc0e3d8d4089a6145f7850572
+      internalID: -393594729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft5
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 569
+        width: 83
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a31f5ee57190874d86ec4aa7afc5241
+      internalID: 207530851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 567
+        width: 83
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2483eba664c25674d9e9253453521df5
+      internalID: 1182146952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_WalkLeft7
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 568
+        width: 83
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6afc9fae6e1934ca548ba2c3756c3c
+      internalID: -1662824909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkDown0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 434
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abb01c1a769eb64da10a476b9fd2ed8
+      internalID: 1203263784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkDown1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 434
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e657cd2670c39e41b037548c3a48ebd
+      internalID: 1030152258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkDown2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 433
+        width: 77
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d3f13f6002e164083cb172d22c5b72
+      internalID: 413131197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkDown3
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 432
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48aff030b239894f9d50320a56f84a3
+      internalID: -2118926585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkUp0
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 433
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3e1aaf6a911264ea860c0c9407e334
+      internalID: -1235137035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkUp1
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 433
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47822a8fdbeae544b2b1ade74ba2504
+      internalID: 116637546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkUp3
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 432
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751b437b433098f4facaefa17b18a67b
+      internalID: -865390341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkUp4
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 433
+        width: 77
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c87dcf1a7afabe44b9d6b1f26f16ae3
+      internalID: -153002388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 293
+        width: 83
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0b439922ef954469c9d345022499de
+      internalID: 2029985350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 292
+        width: 83
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9473a56eba4294f9976545b1c602e7
+      internalID: 789140269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 292
+        width: 83
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a29431c997879942a83453dfa4df58f
+      internalID: -66569798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR3
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 291
+        width: 84
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b52c95ffe8b84c42a2002d04b9e411d
+      internalID: -170376250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR4
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 291
+        width: 83
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92610ab033f7e141a2bb676fa1f4cf6
+      internalID: 1700118837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR5
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 291
+        width: 84
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6366e63e3959e854684e9228ed51d44f
+      internalID: -953559459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR6
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 290
+        width: 83
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6f93d257b7ca441bd7f8ec06dbb819
+      internalID: -1207137900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkR7
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 292
+        width: 84
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5e823f3e1bb1046be3996c4fdcaefd
+      internalID: -471243803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 163
+        width: 88
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a144d55383bc1a04480b45bf98c4bb79
+      internalID: -2060559577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 162
+        width: 85
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378a98513837e8a41809e2f82df9ed6c
+      internalID: 567897043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 162
+        width: 86
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b4f8acfc5ddac4e9e8e5be3331636f
+      internalID: 1867391437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 161
+        width: 88
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe46e74e94bf80946992cad786ab0bf8
+      internalID: -1236619380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL4
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 162
+        width: 87
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ceba3a4517b0b4abcb357d07324e36
+      internalID: -1309983084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL5
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 161
+        width: 88
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfe27c851497034a8a19aeaa4402ed7
+      internalID: -1173304335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 161
+        width: 89
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ecca35cbd259d4a8d3cba235b5ded4
+      internalID: -2050527321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadWalkL7
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 161
+        width: 85
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e2ce113e8e6d041b2ad31be65d977d
+      internalID: -1235005848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleL0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 39
+        width: 83
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0300f4b257bc60648ac8eae026a80738
+      internalID: 1285017783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleL1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 39
+        width: 83
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fe949cbecc353418091b5dac13453e
+      internalID: 1206181599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleR0
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 37
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1d3616198702448bd1da0e5f8f9788
+      internalID: -101409138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleR1
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 38
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1b7af5143898246a99b40419942b73
+      internalID: 804277700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleF0
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 43
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0510d7c41ce226d43a6a4df9d8b26260
+      internalID: -343687125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleF1
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 43
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff18b48e57dcdf4b9b967f5735826e3
+      internalID: -156994010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleB0
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 43
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b700f07e29211434ba6a6544157a3549
+      internalID: -2146880085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidAnim_SadIdleB1
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 43
+        width: 77
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11243def159d3aa409c33f9c31393848
+      internalID: -126919025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      KidAnim_SadWalkL0: -2060559577
+      KidAnim_WalkUp0: 1432301649
+      KidAnim_SadWalkL7: -1235005848
+      KidAnim_WalkRight1: 244182054
+      KidAnim_WalkRight4: 1365369388
+      KidAnim_SadIdleR0: -101409138
+      KidAnim_SadWalkR7: -471243803
+      KidAnim_SadWalkL6: -2050527321
+      KidAnim_FrontIdle1: -817166542
+      KidAnim_WalkUp03: -599364176
+      KidAnim_WalkRight0: 1340302208
+      KidAnim_WalkLeft1: 1533002749
+      KidAnim_RightIdle1: -1233836289
+      KidAnim_WalkLeft3: -112428163
+      KidAnim_WalkRight3: -1938147243
+      KidAnim_WalkDown0: -951081067
+      KidAnim_SadWalkDown3: -2118926585
+      KidAnim_SadWalkDown2: 413131197
+      KidAnim_SadWalkR6: -1207137900
+      KidAnim_SadWalkL1: 567897043
+      KidAnim_WalkLeft4: -393594729
+      KidAnim_WalkLeft5: 207530851
+      KidAnim_SadWalkUp4: -153002388
+      KidAnim_SadIdleF0: -343687125
+      KidAnim_SadIdleF1: -156994010
+      KidAnim_WalkLeft7: -1662824909
+      KidAnim_WalkDown2: 501577035
+      KidAnim_WalkRight7: -370862724
+      KidAnim_WalkDown3: 1602029538
+      KidAnim_WalkDown1: -977759310
+      KidAnim_LeftIdle1: 2023929449
+      KidAnim_WalkLeft0: 331376527
+      KidAnim_BackIdle1: 927551662
+      KidAnim_SadWalkR3: -170376250
+      KidAnim_SadWalkL3: -1236619380
+      KidAnim_SadIdleB1: -126919025
+      KidAnim_WalkUp2: -773428922
+      KidAnim_WalkLeft6: 1182146952
+      KidAnim_RightIdle2: 1038973376
+      KidAnim_SadWalkDown0: 1203263784
+      KidAnim_SadWalkL4: -1309983084
+      KidAnim_WalkUp1: -1009078500
+      KidAnim_WalkRight6: 242989468
+      KidAnim_SadWalkR1: 789140269
+      KidAnim_SadWalkR2: -66569798
+      KidAnim_SadWalkR0: 2029985350
+      KidAnim_FrontIdle2: -149118304
+      KidAnim_SadWalkR4: 1700118837
+      KidAnim_SadWalkUp3: -865390341
+      KidAnim_SadWalkDown1: 1030152258
+      KidAnim_SadIdleL1: 1206181599
+      KidAnim_SadIdleB0: -2146880085
+      KidAnim_WalkLeft2: 339525642
+      KidAnim_SadWalkUp0: -1235137035
+      KidAnim_BackIdle2: 1998197205
+      KidAnim_SadWalkUp1: 116637546
+      KidAnim_SadWalkR5: -953559459
+      KidAnim_LeftIdle2: -1693523746
+      KidAnim_SadWalkL2: 1867391437
+      KidAnim_WalkRight5: 524590478
+      KidAnim_SadWalkL5: -1173304335
+      KidAnim_SadIdleR1: 804277700
+      KidAnim_WalkRight2: -1183116672
+      KidAnim_SadIdleL0: 1285017783
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
