@@ -136,6 +136,7 @@ public class EnemyScript : MonoBehaviour
         {
             progression = 0;
             GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);
+            GameObject.Find("EventSystem").gameObject.GetComponent<EnemySpawns>().enemyCount--;
             StartCoroutine(FadeTo(0, 5)); //fades in five seconds
         }
     }

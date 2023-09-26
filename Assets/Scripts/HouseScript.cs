@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HouseScript : MonoBehaviour
 {
@@ -27,7 +28,8 @@ public class HouseScript : MonoBehaviour
             else if (HouseHP == 0) // final damage sprite transition and trigger loss condition
             {
                 HouseDamage();
-                Debug.Log("trigger loss condition");
+                // Trigger loss Condition
+                StartCoroutine(LossState());
             }
         }
     }
@@ -37,5 +39,12 @@ public class HouseScript : MonoBehaviour
     {
         currentHouseSprite = houseSpriteList[HouseHP];
         gameObject.GetComponent<SpriteRenderer>().sprite = currentHouseSprite;
+    }
+
+    IEnumerator LossState()
+    {
+        GameObject.Find("StationUICanvas").SetActive(false);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(3);
     }
 }
