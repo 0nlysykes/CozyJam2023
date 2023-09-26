@@ -25,6 +25,9 @@ public class EnemyScript : MonoBehaviour
     public int enemyHealth;
     public int pointValue;
     private bool slowed = false;
+    bool sad;
+
+    bool IsSlowed;
     //
 
     //velocity/direction calculation components (used in sprite determination)
@@ -41,7 +44,8 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         //StartCoroutine(FadeTo(0, 5));
-
+        sad = animator.GetBool("Sad");
+        IsSlowed = animator.GetBool("IsSlowed");
         //get the size of waypoints list
         foreach (Transform child in Waypoints.transform)
         {
@@ -123,7 +127,10 @@ public class EnemyScript : MonoBehaviour
     public void takeDamage(int damagetoTake)
     {
         enemyHealth -= damagetoTake;
-
+        if(damagetoTake > 99){
+            animator.SetBool("Sad", true);
+            enemySpeed = enemySpeed * 2;
+        }
         //check for death. Fade if health reaches 0
         if(enemyHealth <= 0)
         {
@@ -157,8 +164,7 @@ public class EnemyScript : MonoBehaviour
 
     IEnumerator SlowCoroutine()
     {
-        bool sad = animator.GetBool("Sad");
-        bool IsSlowed = animator.GetBool("IsSlowed");
+        
         if (!slowed)
         {
             animator.SetBool("Sad", !sad);
