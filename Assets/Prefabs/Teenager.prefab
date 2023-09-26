@@ -104,6 +104,7 @@ MonoBehaviour:
   progression: 0
   enemySpeed: 1
   enemyHealth: 2
+  pointValue: 100
 --- !u!50 &7054090276511594365
 Rigidbody2D:
   serializedVersion: 4

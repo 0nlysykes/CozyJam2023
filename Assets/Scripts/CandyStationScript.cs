@@ -125,14 +125,16 @@ public class CandyStationScript : MonoBehaviour
     //     enemies.Remove(other.transform);
     // }
 
-    // when the player mouses over the turret they should get to see the area of effect
-    private void OnMouseEnter() {
-        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
-    }
+    // // when the player mouses over the turret they should get to see the area of effect
+    // // NOTE since the station is a rigibody it adopts the collider of the targeting area, making it so
+    // //  this function runs even when the player mouses over the invisible targeting area
+    // private void OnMouseEnter() {
+    //     gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+    // }
 
-    private void OnMouseExit() {
-        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
-    }
+    // private void OnMouseExit() {
+    //     gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+    // }
 
     // this coroutine is TEMPORARY, and only serves to show that the candy machine is doing something when it fires.
     //  it will be replaced with actual animation later(tm)
