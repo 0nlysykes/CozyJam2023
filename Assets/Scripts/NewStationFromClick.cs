@@ -8,13 +8,12 @@ public class NewStationFromClick : MonoBehaviour
     // Objects to grab
    // public GameObject station; //direct reference to prefab for station 
     public GameObject PlayerCurrency; // direct reference to text box for currency
+    public GameObject cancelPrompt;
     //public GameObject PlayerCurrency; // direct reference to text box for currency
     private int stationCost; // will grab a cost reference to the universal script for station properties
 
     // Other
-    private string playerCur; // to convert player currency to string
     private int moneyValue;
-    private bool validCurrency = false; // will keep track of whether player has enough currency
     private bool spawningStation = false; // keeps track of whether a station is ACTIVELY being spawned (player is dragging it on scene)
     private GameObject newstation; // this is to keep track of the station we are spawning from the button click
     private Vector3 mousePos; // to keep track of the mouse position 
@@ -50,10 +49,16 @@ public class NewStationFromClick : MonoBehaviour
             newstation.transform.localPosition = new Vector3(mousePos.x, mousePos.y, 0);
             if(!newstation.gameObject.GetComponent<StationUniversalProperties>().isColliding){
                 spawningStation = false;
+                cancelPrompt.gameObject.SetActive(false);
                 newstation.gameObject.GetComponentInChildren<CircleCollider2D>().enabled = true;
                 enableScripts(); // reactivate the station's script's once placed
                 newstation.gameObject.GetComponent<StationUniversalProperties>().isEnabled = false;
+                PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*stationCost);
             }
+        } else if(Input.GetMouseButtonDown(1)){
+            Destroy(newstation);
+            spawningStation = false;
+            cancelPrompt.gameObject.SetActive(false);
         }
     }
     public void SpawnNew(GameObject stationType)
@@ -63,6 +68,7 @@ public class NewStationFromClick : MonoBehaviour
         {
             newstation = Instantiate(stationType, currentPosition, Quaternion.identity); //spawn station on the mouse
             spawningStation = true;
+            cancelPrompt.gameObject.SetActive(true);
             disableScripts(); // deactivate the station's script's once button is pressed
             newstation.gameObject.GetComponent<StationUniversalProperties>().enabled = true;
             Update(); // kick off update to track object alongside the cursor
@@ -122,15 +128,17 @@ public class NewStationFromClick : MonoBehaviour
 
         stationCost = station.GetComponent<StationUniversalProperties>().cost; //get the cost of the station
         moneyValue = PlayerCurrency.GetComponent<MoneyScript>().getValue();
-        if (moneyValue > stationCost) // check if player has enough currency
-        {
-            PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*stationCost);
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return moneyValue>stationCost;
+
+        // if (moneyValue > stationCost) // check if player has enough currency
+        // {
+            
+        //     return true;
+        // }
+        // else
+        // {
+        //     return false;
+        // }
     }
 
     // private void UpdateCurrencyUI()

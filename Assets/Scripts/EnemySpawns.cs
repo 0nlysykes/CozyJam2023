@@ -7,6 +7,7 @@ public class EnemySpawns : MonoBehaviour
     // Start is called before the first frame update
     public GameObject DefeatedWaypoint;
     public GameObject WaypointsParent;
+    public GameObject bannerCanvas;
     public float totalRoundTime;
     private float SpawnTimer = 0f;
     public float elapsedTime = 0f;
@@ -25,6 +26,7 @@ public class EnemySpawns : MonoBehaviour
     public GameObject PillowsackKid;
     public float pillowsackTimeInterval;
     private float z = 1;
+    public int enemyCount = 0;
 
     void Start()
     {
@@ -64,21 +66,27 @@ public class EnemySpawns : MonoBehaviour
             {
                 GameObject smallChild = Instantiate(SmallChild, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 x++; // this variable keeps track of intervals passed
+                enemyCount++;
             }
             // spawn check for teenagers
             if (SpawnTimer >= teenTimeInterval * y)
             {
                 GameObject teenager = Instantiate(Teenager, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 y++; // this variable keeps track of intervals passed
+                //enemyCount++;
             }
             // spawn check for pillowsack kids
             if (SpawnTimer >= pillowsackTimeInterval * z)
             {
                 GameObject pillowsackKid = Instantiate(PillowsackKid, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 z++; // this variable keeps track of intervals passed
+                //enemyCount++;
             }
+        } else if(enemyCount == 0){
+            StartCoroutine(bannerCanvas.GetComponent<BannerScript>().Victory());
+            enemyCount--; //this makes it so the coroutine does not run again
         }
     }
 
-
+    
 }
