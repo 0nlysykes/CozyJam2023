@@ -30,12 +30,12 @@ public class SlowStationScript : MonoBehaviour
         Instantiate(slowBomb, new Vector3(transform.position.x, transform.position.y, transform.position.z+.5f), Quaternion.identity);
     }
 
-    // when the player mouses over the turret they should get to see the area of effect
-    private void OnMouseEnter() {
-        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
-    }
+    // // when the player mouses over the turret they should get to see the area of effect
+    // private void OnMouseEnter() {
+    //     gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+    // }
 
-    private void OnMouseExit() {
-        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
-    }
+    // private void OnMouseExit() {
+    //     gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+    // }
 }

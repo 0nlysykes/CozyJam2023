@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class EnemyScript : MonoBehaviour
     public float progression = 0f;
     public float enemySpeed;
     public int enemyHealth;
+    public int pointValue;
     private bool slowed = false;
     //
 
@@ -91,6 +93,7 @@ public class EnemyScript : MonoBehaviour
         if(enemyHealth <= 0)
         {
             progression = 0;
+            GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);
             StartCoroutine(FadeTo(0, 5)); //fades in five seconds
         }
     }
