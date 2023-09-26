@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 89843042}
   - component: {fileID: 89843041}
   - component: {fileID: 89843043}
+  - component: {fileID: 89843044}
   m_Layer: 9
   m_Name: house
   m_TagString: Untagged
@@ -402,6 +403,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.460918, y: 7.5}
   m_EdgeRadius: 0
+--- !u!114 &89843044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89843040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278a0baf9180a4144b6b7ea7630e00d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HouseHP: 3
+  houseSpriteList:
+  - {fileID: 21300000, guid: 477c8c8cf82d8924f8b842b84f89fbee, type: 3}
+  - {fileID: 21300000, guid: 0b4961d80970a5844b80e8038bb85ccf, type: 3}
+  - {fileID: 21300000, guid: 1047d2a7db0032841a7310c5e253c8d8, type: 3}
+  - {fileID: 21300000, guid: f6d23f7bb547e6046928984fc7cc4b4a, type: 3}
 --- !u!1 &99362290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945876521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.743, y: 1.024, z: 0}
+  m_LocalPosition: {x: -0.78, y: 0.93, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4208,7 +4227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778241479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.871, y: -0.98, z: 0}
+  m_LocalPosition: {x: -0.85, y: -1.07, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
