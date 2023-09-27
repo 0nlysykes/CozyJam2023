@@ -31,6 +31,7 @@ public class HouseScript : MonoBehaviour
                 // Trigger loss Condition
                 StartCoroutine(LossState());
             }
+            other.gameObject.GetComponent<EnemyScript>().takeDamage(50);
         }
     }
 

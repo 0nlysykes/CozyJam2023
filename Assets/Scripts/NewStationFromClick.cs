@@ -55,7 +55,8 @@ public class NewStationFromClick : MonoBehaviour
                 newstation.gameObject.GetComponent<StationUniversalProperties>().isEnabled = false;
                 PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*stationCost);
             }
-        } else if(Input.GetMouseButtonDown(1)){
+            //else if covers if game is paused, deleting the station if it is
+        } else if(Input.GetMouseButtonDown(1) || GameObject.Find("PauseCanvas").GetComponent<PauseScript>().isPaused){
             Destroy(newstation);
             spawningStation = false;
             cancelPrompt.gameObject.SetActive(false);

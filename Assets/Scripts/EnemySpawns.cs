@@ -10,20 +10,23 @@ public class EnemySpawns : MonoBehaviour
     public GameObject bannerCanvas;
     public float totalRoundTime;
     private float SpawnTimer = 0f;
-    public float elapsedTime = 0f;
+    public int roundNumber = 0;
 
     // small enemy spawner details
     public GameObject SmallChild;
+    public float[] smallChildSpawnRates = {2,1.8f,1.6f,1.4f,1.2f,1f};//new float[6];
     public float smallTimeInterval;
     private float x = 1;
 
     // teen enemy spawner details
     public GameObject Teenager;
+    public float[] teenagerSpawnRates = {6, 5.6f, 5.2f, 4.8f, 4.4f, 4f};// new float[6];
     public float teenTimeInterval;
     private float y = 1;
 
     // pillowsack enemy spawner details
     public GameObject PillowsackKid;
+    public float[] pillowsackSpawnRates = {10, 9f, 8f, 7f, 6f, 5f};//new float[6];
     public float pillowsackTimeInterval;
     private float z = 1;
     public int enemyCount = 0;
@@ -37,22 +40,17 @@ public class EnemySpawns : MonoBehaviour
         Teenager.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
         PillowsackKid.gameObject.GetComponent<EnemyScript>().DefeatedWaypoint = DefeatedWaypoint;
 
-        // this will make all the waypoints on the path invisisble
+        // this will make all the waypoints on the path invisible
         foreach (Transform child in WaypointsParent.transform)
         {
             child.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //SpawnTimer += Time.deltaTime; // keep adding time per frame to timer variable 
+        nextRound();
     }
 
     private void FixedUpdate()
     {
-        elapsedTime += Time.deltaTime; // for tracking
         SpawnTimer += Time.deltaTime; // keep adding time per frame to timer variable 
         SpawnTime();
     }
@@ -73,18 +71,39 @@ public class EnemySpawns : MonoBehaviour
             {
                 GameObject teenager = Instantiate(Teenager, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 y++; // this variable keeps track of intervals passed
-                //enemyCount++;
+                //enemyCount++; UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
             }
             // spawn check for pillowsack kids
             if (SpawnTimer >= pillowsackTimeInterval * z)
             {
                 GameObject pillowsackKid = Instantiate(PillowsackKid, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 z++; // this variable keeps track of intervals passed
-                //enemyCount++;
+                //enemyCount++; UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
             }
-        } else if(enemyCount == 0){
-            StartCoroutine(bannerCanvas.GetComponent<BannerScript>().Victory());
-            enemyCount--; //this makes it so the coroutine does not run again
+        } else {
+            //Time has exceeded the round timer, so the round ends
+            nextRound();
+        }
+
+
+    }
+
+    private void nextRound(){
+        roundNumber++;
+        if(roundNumber > 6){
+            if(enemyCount == 0){
+                StartCoroutine(bannerCanvas.GetComponent<BannerScript>().Victory());
+                enemyCount--; //this makes it so the coroutine does not run again
+            }
+        } else {
+            SpawnTimer = 0;
+            x = 1; 
+            y = 1; 
+            z = 1;
+            smallTimeInterval = smallChildSpawnRates[roundNumber - 1];
+            teenTimeInterval = teenagerSpawnRates[roundNumber - 1];
+            pillowsackTimeInterval = pillowsackSpawnRates[roundNumber - 1];
+            StartCoroutine(bannerCanvas.GetComponent<BannerScript>().RoundEnd(roundNumber));
         }
     }
 

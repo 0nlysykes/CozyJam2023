@@ -25,6 +25,7 @@ public class EnemyScript : MonoBehaviour
     public int enemyHealth;
     public int pointValue;
     private bool slowed = false;
+    private bool defeated = false;
     bool sad;
 
     bool IsSlowed;
@@ -132,8 +133,9 @@ public class EnemyScript : MonoBehaviour
             enemySpeed = enemySpeed * 2;
         }
         //check for death. Fade if health reaches 0
-        if(enemyHealth <= 0)
+        if(enemyHealth <= 0 && !defeated)
         {
+            defeated = true;
             progression = 0;
             GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);
             GameObject.Find("EventSystem").gameObject.GetComponent<EnemySpawns>().enemyCount--;
