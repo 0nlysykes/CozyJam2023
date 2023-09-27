@@ -19,10 +19,12 @@ public class PauseScript : MonoBehaviour
         if (Input.GetButtonDown("Pause") && !isPaused)
         {
             savedTimeScale= Time.timeScale;
+            //transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("BannerText").GetComponent<TMP_Text>().enabled = false;
-            foreach (Transform child in GameObject.Find("StationButtons").transform){
-                child.gameObject.SetActive(false);
-            }
+            GameObject.Find("StationUICanvas").transform.GetChild(0).gameObject.SetActive(false);
+            // foreach (Transform child in GameObject.Find("StationButtons").transform){
+            //     child.gameObject.SetActive(false);
+            // }
             //AudioListener.pause = true;
             Time.timeScale = 0; 
             isPaused = true;
@@ -40,9 +42,7 @@ public class PauseScript : MonoBehaviour
     public void Unpause()
     {
         GameObject.Find("BannerText").GetComponent<TMP_Text>().enabled = true;
-        foreach (Transform child in GameObject.Find("StationButtons").transform){
-            child.gameObject.SetActive(true);
-        }
+        GameObject.Find("StationUICanvas").transform.GetChild(0).gameObject.SetActive(true);
         //AudioListener.pause = false;
         Time.timeScale = savedTimeScale;
         isPaused = false;
