@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Runtime.CompilerServices;
 
 public class NewStationFromClick : MonoBehaviour
 {
@@ -54,9 +55,15 @@ public class NewStationFromClick : MonoBehaviour
                 enableScripts(); // reactivate the station's script's once placed
                 newstation.gameObject.GetComponent<StationUniversalProperties>().isEnabled = false;
                 PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*stationCost);
+                transform.GetChild(0).gameObject.SetActive(true);
             }
             //else if covers if game is paused, deleting the station if it is
-        } else if(Input.GetMouseButtonDown(1) || GameObject.Find("PauseCanvas").GetComponent<PauseScript>().isPaused){
+        } else if(Input.GetMouseButtonDown(1)){
+            Destroy(newstation);
+            spawningStation = false;
+            cancelPrompt.gameObject.SetActive(false);
+            transform.GetChild(0).gameObject.SetActive(true);
+        } else if (GameObject.Find("PauseCanvas").GetComponent<PauseScript>().isPaused){
             Destroy(newstation);
             spawningStation = false;
             cancelPrompt.gameObject.SetActive(false);
@@ -71,7 +78,9 @@ public class NewStationFromClick : MonoBehaviour
             spawningStation = true;
             cancelPrompt.gameObject.SetActive(true);
             disableScripts(); // deactivate the station's script's once button is pressed
+            transform.GetChild(0).gameObject.SetActive(false);
             newstation.gameObject.GetComponent<StationUniversalProperties>().enabled = true;
+            newstation.gameObject.GetComponent<StationUniversalProperties>().upgradeObject = gameObject;
             Update(); // kick off update to track object alongside the cursor
         }
         else
@@ -105,46 +114,8 @@ public class NewStationFromClick : MonoBehaviour
 
     private bool CheckForValidCurrency(GameObject station)
     {
-        // Debug.Log(PlayerCurrency.GetComponent<TMP_Text>().text);
-        // playerCur = PlayerCurrency.GetComponent<TMP_Text>().text;
-
-        // // Debug.Log(PlayerCurrency.GetComponent<Text>().text);
-        // int.TryParse(playerCur, out moneyValue); // grab cost string from text box and parse to int
-        // //playerCurrency = int.Parse(PlayerCurrency.text);
-        // Debug.Log("player currency: " + moneyValue);
-
-
-        // stationCost = station.GetComponent<StationUniversalProperties>().cost; //get the cost of the station
-        // Debug.Log("station cost: " + stationCost);
-        // if (moneyValue > stationCost) // check if player has enough currency
-        // {
-        //     moneyValue = moneyValue - stationCost; // subtract from player currency
-        //     UpdateCurrencyUI();
-        //     return true;
-        // }
-        // else
-        // {
-        //     return false;
-        // }
-
         stationCost = station.GetComponent<StationUniversalProperties>().cost; //get the cost of the station
         moneyValue = PlayerCurrency.GetComponent<MoneyScript>().getValue();
         return moneyValue>stationCost;
-
-        // if (moneyValue > stationCost) // check if player has enough currency
-        // {
-            
-        //     return true;
-        // }
-        // else
-        // {
-        //     return false;
-        // }
     }
-
-    // private void UpdateCurrencyUI()
-    // {
-    //     playerCur = moneyValue.ToString();
-    //     PlayerCurrency.GetComponent<TMP_Text>().text = playerCur; // throw new player currency up to UI
-    // }
 }

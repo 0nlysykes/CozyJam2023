@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class StationUniversalProperties : MonoBehaviour
 {
     public int cost;
+    public int costToUpgrade;
     public bool isEnabled = true;
     public bool isColliding = false;
     public Color originalColor;
+
+    public GameObject upgradeObject;
 
     private int numberOfBlockers = 0;
 
@@ -40,10 +44,18 @@ public class StationUniversalProperties : MonoBehaviour
     // NOTE since the station is a rigibody it adopts the collider of the targeting area, making it so
     //  this function runs even when the player mouses over the invisible targeting area
     private void OnMouseEnter() {
-        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        if(upgradeObject.GetComponent<UpgradeStationScript>().upgradingStation){
+            upgradeObject.GetComponent<UpgradeStationScript>().PopUp("Cost to Upgrade: " + costToUpgrade);
+        } else {
+            gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 
     private void OnMouseExit() {
-        gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        if(upgradeObject.GetComponent<UpgradeStationScript>().upgradingStation){
+            upgradeObject.GetComponent<UpgradeStationScript>().ClosePopUp();
+        } else {
+            gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }

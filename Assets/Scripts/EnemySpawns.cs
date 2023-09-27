@@ -71,14 +71,14 @@ public class EnemySpawns : MonoBehaviour
             {
                 GameObject teenager = Instantiate(Teenager, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 y++; // this variable keeps track of intervals passed
-                //enemyCount++; UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
+                enemyCount++; //UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
             }
             // spawn check for pillowsack kids
             if (SpawnTimer >= pillowsackTimeInterval * z)
             {
                 GameObject pillowsackKid = Instantiate(PillowsackKid, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
                 z++; // this variable keeps track of intervals passed
-                //enemyCount++; UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
+                enemyCount++; //UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
             }
         } else {
             //Time has exceeded the round timer, so the round ends
