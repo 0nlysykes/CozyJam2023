@@ -1,0 +1,818 @@
+fileFormatVersion: 2
+guid: 58c9a6aab7fe75542b144d3e433a6e7a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 130
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Down0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 815
+        width: 109
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0625d4454c1114ebd747cdc05145bb
+      internalID: 119020714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Down1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 814
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78665afb7ab647e4eb4ab466f5c2d42d
+      internalID: -1872057707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Down2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 814
+        width: 109
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178dfea15f62fb34b898ecfb75a0d4ad
+      internalID: 2001417360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Down3
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 814
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422be9d381ad946468b5a47c0b1fbf0c
+      internalID: -597761118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Up1
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 814
+        width: 109
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b0a27778a61754f87b12b4b5d4162e
+      internalID: 190599707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Up2
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 814
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bbc6ea6c787864fa5f567fc403632e
+      internalID: 46149747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Up3
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 814
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e619520a13157ec47b24467be587af23
+      internalID: -926230654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_Up4
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 815
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbfae3c5201da1439f6f498de385c2e
+      internalID: 330850641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_FaceIdle1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 541
+        width: 109
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc64733250acb234b9cf7c875ad0f9f6
+      internalID: -1179590626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_FaceIdle2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 542
+        width: 109
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ab63ba3b2208f479cadc98f99ad65a
+      internalID: -2032828161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_BackIdle1
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 542
+        width: 109
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82315cc03adbd08428e4eb65009aebfb
+      internalID: -932571575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_BackIdle2
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 540
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5e55644fbd6e84a87f3bfd14cc7dd5
+      internalID: -1075628600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_SidetoSide1
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 540
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6d676a4a8aa914bb8fac1f06b8023e
+      internalID: 218939095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_SidetoSide2
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 540
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494230b992325ba4d951903644fcf438
+      internalID: 234608768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_SidetoSide3
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 542
+        width: 110
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84dabea56c730bf44b641f9168a692dd
+      internalID: -976778948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_R0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 269
+        width: 103
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c643140db21814cbf25e5249dd91ee
+      internalID: -165495583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_r1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 269
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3a7f914c79dfd46b3fd57b44d57b0f
+      internalID: 27553488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_r2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 270
+        width: 103
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4344a3a4a7f45489c30774a61e3ef7
+      internalID: 1874570818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_r3
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 268
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadd096c333e30548b81c0330a8da5e2
+      internalID: 2125119973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_r4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 271
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfcd5dfa4841164a9808d3cc8c2582e
+      internalID: 1276618967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_r5
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 271
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcaa58f62226f44b9d045aeda3325e6
+      internalID: 1273897490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_r6
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 271
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5924e0207678c48bf0d9896f2b58de
+      internalID: 1407348563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_r7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 269
+        width: 104
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c866d6f691c35443b798dd4665c6103
+      internalID: 92361719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 25
+        width: 103
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113588230bfee264a94e93784fb116ae
+      internalID: 1122779523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 25
+        width: 104
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2770b8d241b28408fd6a88865c984b
+      internalID: -123473391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l2
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 24
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68c27b71be54a74887451e0a958c74d
+      internalID: 423895977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 23
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a29bcc497935945a580755f62296ba
+      internalID: 99446089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l4
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 24
+        width: 102
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acf8e3cbfc868c4fa6594f9ebf17435
+      internalID: -177466142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l5
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 25
+        width: 104
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2406cee80584c84dac706508cc03e33
+      internalID: 1412852374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l6
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 23
+        width: 103
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dd7c5907f28474db308c90cbe86979
+      internalID: 522720706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryTeenNoMask_l7
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 26
+        width: 104
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664f9b08319a4c645a4eec0be94b7087
+      internalID: -1516403054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AngryTeenNoMask_Down2: 2001417360
+      AngryTeenNoMask_Up1: 190599707
+      AngryTeenNoMask_0: 65815679
+      AngryTeenNoMask_SidetoSide1: 218939095
+      AngryTeenNoMask_R0: -165495583
+      AngryTeenNoMask_Down3: -597761118
+      AngryTeenNoMask_FaceIdle1: -1179590626
+      AngryTeenNoMask_Up4: 330850641
+      AngryTeenNoMask_l6: 522720706
+      AngryTeenNoMask_BackIdle2: -1075628600
+      AngryTeenNoMask_r2: 1874570818
+      AngryTeenNoMask_l2: 423895977
+      AngryTeenNoMask_Up3: -926230654
+      AngryTeenNoMask_l7: -1516403054
+      AngryTeenNoMask_SidetoSide2: 234608768
+      AngryTeenNoMask_Down1: -1872057707
+      AngryTeenNoMask_l0: 1122779523
+      AngryTeenNoMask_l1: -123473391
+      AngryTeenNoMask_r5: 1273897490
+      AngryTeenNoMask_Up2: 46149747
+      AngryTeenNoMask_Down0: 119020714
+      AngryTeenNoMask_r3: 2125119973
+      AngryTeenNoMask_SidetoSide3: -976778948
+      AngryTeenNoMask_r4: 1276618967
+      AngryTeenNoMask_r1: 27553488
+      AngryTeenNoMask_r6: 1407348563
+      AngryTeenNoMask_l3: 99446089
+      AngryTeenNoMask_r7: 92361719
+      AngryTeenNoMask_l4: -177466142
+      AngryTeenNoMask_BackIdle1: -932571575
+      AngryTeenNoMask_FaceIdle2: -2032828161
+      AngryTeenNoMask_l5: 1412852374
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

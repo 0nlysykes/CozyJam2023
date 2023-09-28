@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Front 0
+  m_Name: Pillow_Idle_Front 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 52d9d7aea6b3ae34484455638c47252a, type: 2}
+  m_Motion: {fileID: 7400000, guid: c5e62b3ea43478842bd54bf2d9bcc97f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -203,7 +203,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Right 0
+  m_Name: Pillow_Idle_Right 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -218,7 +218,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 68622e4ed6c947f4da1b0702882f366c, type: 2}
+  m_Motion: {fileID: 7400000, guid: c83a83c06045df84494482361e196061, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -346,7 +346,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_Idle_Front 0 0
+  m_Name: AngryPiIllow_Idle_Front 0 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -361,7 +361,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4b82d165437bec043809a3c97902e396, type: 2}
+  m_Motion: {fileID: 7400000, guid: 52b4a5b0928e6dc4ca3482f9c3c596bf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -374,7 +374,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_IdleBack 0
+  m_Name: AngryPillow_IdleBack 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -389,7 +389,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 318531d45d8592943b877922e17538a6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 368d78aa6a3cce2498ea7498c6731b56, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -589,7 +589,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Movemnt
+  m_Name: PillowMovemnt
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -626,7 +626,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Back 0
+  m_Name: Pillow_Idle_Back 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -641,7 +641,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 318531d45d8592943b877922e17538a6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6abdb214b052aee41888ac83b85da173, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1140,7 +1140,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Front 0 0
+  m_Name: Pillow_Idle_Front 0 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1155,7 +1155,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 52d9d7aea6b3ae34484455638c47252a, type: 2}
+  m_Motion: {fileID: 7400000, guid: c5e62b3ea43478842bd54bf2d9bcc97f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1228,37 +1228,37 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 396573719109456522}
-    m_Position: {x: -510, y: -90, z: 0}
+    m_Position: {x: -510, y: -410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7051846487160152859}
     m_Position: {x: -460, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2855548606001247693}
-    m_Position: {x: -150, y: 410, z: 0}
+    m_Position: {x: -20, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 183182707782962978}
-    m_Position: {x: 140, y: 170, z: 0}
+    m_Position: {x: -320, y: -160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9170654278935998332}
-    m_Position: {x: -970, y: 80, z: 0}
+    m_Position: {x: -1090, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6326239513501650794}
-    m_Position: {x: -970, y: 180, z: 0}
+    m_Position: {x: -1080, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3795095376343792114}
-    m_Position: {x: -940, y: -50, z: 0}
+    m_Position: {x: -1080, y: -240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8992822464119809055}
-    m_Position: {x: 80, y: -20, z: 0}
+    m_Position: {x: 510, y: -300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8036745390115318163}
-    m_Position: {x: -610, y: 470, z: 0}
+    m_Position: {x: 770, y: -280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7977156316104054587}
-    m_Position: {x: -370, y: 40, z: 0}
+    m_Position: {x: -730, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7329586678519904007}
-    m_Position: {x: -370, y: 550, z: 0}
+    m_Position: {x: -540, y: 510, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5091545950376869252}
     m_Position: {x: 60, y: 480, z: 0}
@@ -1300,9 +1300,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -10, y: -280, z: 0}
+  m_AnyStatePosition: {x: -220, y: -570, z: 0}
   m_EntryPosition: {x: -620, y: -480, z: 0}
-  m_ExitPosition: {x: 0, y: -200, z: 0}
+  m_ExitPosition: {x: -160, y: -540, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 396573719109456522}
 --- !u!1101 &-3534152614128265108
@@ -1448,7 +1448,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: e314f181fc7db0646813ec7e27d2fa65, type: 2}
+    m_Motion: {fileID: 7400000, guid: f934efac9e4267947908c77c19acf4b3, type: 2}
     m_Threshold: -1
     m_Position: {x: 0, y: -1}
     m_TimeScale: 1
@@ -1456,7 +1456,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 240cede55e70f2c44aa6cee11b2043a2, type: 2}
+    m_Motion: {fileID: 7400000, guid: ccea49706db89cc4e9cc449dd703ef61, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
@@ -1464,7 +1464,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: c2e51343bcb55514bb9b05ac9b6910b5, type: 2}
+    m_Motion: {fileID: 7400000, guid: acaee9bbf86841b4badc0d023f079bb6, type: 2}
     m_Threshold: 3
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -1472,7 +1472,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: f055b8af1a4b44f4ba2cd4af0d54720f, type: 2}
+    m_Motion: {fileID: 7400000, guid: 37e6dc8a2d0ee5b4583c997a3004b5b6, type: 2}
     m_Threshold: 5
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -1744,7 +1744,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KidAnim_Back_Idle
+  m_Name: PillowControl
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Horizontal
@@ -1825,7 +1825,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_IdleBack
+  m_Name: Pillow_IdleBack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1841,7 +1841,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 318531d45d8592943b877922e17538a6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6abdb214b052aee41888ac83b85da173, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1929,7 +1929,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Back
+  m_Name: Pillow_Idle_Back
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1944,7 +1944,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 318531d45d8592943b877922e17538a6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6abdb214b052aee41888ac83b85da173, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2025,7 +2025,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5a14fd120813cb34a80647dee9d2d23c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 881b936de39fb3049a749782ff877bc2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2097,7 +2097,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Left 0
+  m_Name: Pillow_Idle_Left 0 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2112,7 +2112,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e79c3adf46be4cb4cbea7096e7c5c250, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4f73c1fc97f4aca46b47e12c52445502, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2464,7 +2464,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sad_Movemnt
+  m_Name: ANgryPPillow_Movemnt
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2483,7 +2483,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -4631084764602088702}
+  m_Motion: {fileID: 3741452480908350174}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2496,7 +2496,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_Idle_Right 0
+  m_Name: AngryPillow_Idle_Right 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2511,7 +2511,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c307a326763eaa146bd9f00df9ecfa93, type: 2}
+  m_Motion: {fileID: 7400000, guid: 85062c11eb66ce9459925c1c89686980, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2635,6 +2635,53 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!206 &3741452480908350174
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blend Tree
+  m_Childs:
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 5ad0d29d1a0ec234bafbd86667086809, type: 2}
+    m_Threshold: 0
+    m_Position: {x: 0, y: -1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Horizontal
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 46f76b4e5f70bdb45af44719ef6aa87a, type: 2}
+    m_Threshold: 0.33333334
+    m_Position: {x: 0, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Horizontal
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 1f172e1389813974ba28aba2f4fcadb0, type: 2}
+    m_Threshold: 0.6666667
+    m_Position: {x: -1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Horizontal
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 1d2e968134e7d0a458b833940dfdb814, type: 2}
+    m_Threshold: 1
+    m_Position: {x: 1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Horizontal
+    m_Mirror: 0
+  m_BlendParameter: Horizontal
+  m_BlendParameterY: Vertical
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 1
 --- !u!1102 &3795095376343792114
 AnimatorState:
   serializedVersion: 6
@@ -2642,7 +2689,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Right
+  m_Name: Pillow_Idle_Right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2657,7 +2704,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 68622e4ed6c947f4da1b0702882f366c, type: 2}
+  m_Motion: {fileID: 7400000, guid: c83a83c06045df84494482361e196061, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2785,7 +2832,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KId_Idle_SS 0
+  m_Name: Pillow_Idle_SS 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2800,7 +2847,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e8cfcbd0091c4714ba71b011b0e06536, type: 2}
+  m_Motion: {fileID: 7400000, guid: 598a410e2ec878d41a07e66cc4bf1326, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2844,7 +2891,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_SidetoSide
+  m_Name: AngryPillow_SidetoSide
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2859,7 +2906,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a959749be2018da49836c78c271bbf4d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 477a35d9a192ef549a86caa3a6d07aa6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2928,7 +2975,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SlowedMovement
+  m_Name: PillowSlowedMovement
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3046,7 +3093,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kid_Idle_Left
+  m_Name: Pillow_Idle_Left 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3061,7 +3108,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e79c3adf46be4cb4cbea7096e7c5c250, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4f73c1fc97f4aca46b47e12c52445502, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3270,7 +3317,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KId_Idle_SS
+  m_Name: Pillow_Idle_SS
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3285,7 +3332,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e8cfcbd0091c4714ba71b011b0e06536, type: 2}
+  m_Motion: {fileID: 7400000, guid: 598a410e2ec878d41a07e66cc4bf1326, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3354,7 +3401,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_Idle_Front 0
+  m_Name: AngryPillow_Idle_Front 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3370,7 +3417,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4b82d165437bec043809a3c97902e396, type: 2}
+  m_Motion: {fileID: 7400000, guid: 52b4a5b0928e6dc4ca3482f9c3c596bf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3408,7 +3455,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_SidetoSide 0
+  m_Name: ANgryPillow_SidetoSide 0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3423,7 +3470,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a959749be2018da49836c78c271bbf4d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 477a35d9a192ef549a86caa3a6d07aa6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3436,7 +3483,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'SadKid_Idle_Left '
+  m_Name: 'AngryPillow_Idle_Left '
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3452,7 +3499,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5a14fd120813cb34a80647dee9d2d23c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 881b936de39fb3049a749782ff877bc2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3554,23 +3601,23 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 2d12a89402e152d4f9cb163d064253bd, type: 2}
+    m_Motion: {fileID: 7400000, guid: 9b4a4add699d326439d8bdf0d5b2b280, type: 2}
     m_Threshold: -1
-    m_Position: {x: 0, y: -1}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Horizontal
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 5fa6604466960e347b0ba68ce0f953b8, type: 2}
-    m_Threshold: 1
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: dceaacc16bc3007498b69952a6b7f12e, type: 2}
+    m_Motion: {fileID: 7400000, guid: 496b0f587a49aa043a8f27845bbf8357, type: 2}
+    m_Threshold: 1
+    m_Position: {x: 0, y: -1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Horizontal
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 1d9f023b85833654195d305b65fff54c, type: 2}
     m_Threshold: 3
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -3578,7 +3625,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: a13e5994bc1b9ce49b84c9fddd3325ee, type: 2}
+    m_Motion: {fileID: 7400000, guid: a41c619541207f649a3d5b17a2285f4f, type: 2}
     m_Threshold: 5
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -3624,7 +3671,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SadKid_Idle_Right
+  m_Name: AngryPillow_Idle_Right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3640,7 +3687,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c307a326763eaa146bd9f00df9ecfa93, type: 2}
+  m_Motion: {fileID: 7400000, guid: 85062c11eb66ce9459925c1c89686980, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
