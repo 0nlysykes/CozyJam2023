@@ -28,7 +28,12 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-    public void exitGame(){
-        Application.Quit();
+    public void credits()
+    {
+        SceneManager.LoadScene("Credits");
     }
+
+    // public void exitGame(){
+        // Application.Quit();
+    // }
 }
