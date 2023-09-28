@@ -128,13 +128,23 @@ public class EnemyScript : MonoBehaviour
     public void takeDamage(int damagetoTake)
     {
         enemyHealth -= damagetoTake;
-        if(damagetoTake > 99){
+        if (damagetoTake > 99)
+        {
             animator.SetBool("Sad", true);
             enemySpeed = enemySpeed * 2;
         }
+
+        // THIS IS PLACEHOLDER FOR THE TEEN MASK SWAP... will need to be adjusted. Other two sprites will be unnafected
+        bool MidState = animator.GetBool("MidState");
+        if (enemyHealth == 3)
+            animator.SetBool("MidState", !MidState);
+        // THIS IS PLACEHOLDER FOR THE TEEN MASK SWAP... will need to be adjusted. Other two sprites will be unnafected
+
         //check for death. Fade if health reaches 0
-        if(enemyHealth <= 0 && !defeated)
+        if (enemyHealth <= 0 && !defeated)
         {
+            
+
             defeated = true;
             progression = 0;
             GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);

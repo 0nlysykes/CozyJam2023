@@ -2147,8 +2147,8 @@ MonoBehaviour:
   - 1.4
   - 1.2
   - 1
-  smallTimeInterval: 2
-  Teenager: {fileID: 7054090276511594353, guid: 0786e0fd76a138f4a85e83c72b77fe5f, type: 3}
+  smallTimeInterval: 100
+  Teenager: {fileID: 5292229068538705554, guid: 56ab5fb12d0f94343b3944374e742732, type: 3}
   teenagerSpawnRates:
   - 6
   - 5.6
@@ -2157,7 +2157,7 @@ MonoBehaviour:
   - 4.4
   - 4
   teenTimeInterval: 6
-  PillowsackKid: {fileID: 214131040834727950, guid: c841cb5a3f24e724d971e8f04f87a481, type: 3}
+  PillowsackKid: {fileID: 5292229068538705554, guid: e401ae968b829984cb8473bfd338aff7, type: 3}
   pillowsackSpawnRates:
   - 10
   - 9
@@ -2165,7 +2165,7 @@ MonoBehaviour:
   - 7
   - 6
   - 5
-  pillowsackTimeInterval: 10
+  pillowsackTimeInterval: 100
   enemyCount: 0
 --- !u!1 &620938822
 GameObject:
