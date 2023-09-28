@@ -8,8 +8,7 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
     public Animator animator;
-   
-
+    
     Vector2 movement;
 
     // Update is called once per frame
@@ -34,9 +33,13 @@ public class EnemyMovement : MonoBehaviour
             animator.SetBool("IsSlowed", !IsSlowed);
         if (IsSlowed)
         {
-            moveSpeed = moveSpeed / 4;
+            moveSpeed = baseSpeed / 4;
         }
 
+        bool MidState = animator.GetBool("MidState");
+        if (Input.GetKeyUp(KeyCode.I))
+            animator.SetBool("MidState", !MidState);
+       
 
 
 
