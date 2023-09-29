@@ -1,15 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CandyStationScript : MonoBehaviour
 {
-    public int ammo = 50;
-    private float fireRate = 1;
 
-    // damage is however much satisfaction a candy bar is worth
-    private int damage = 1;
-    public bool isUpgraded = false;
+    public GameObject ammoPopup;
+    
+    // Variables that can be altered by upgrading the station
+    public float fireRate = 1;
+    public int ammo = 30;
+    public int maxAmmo = 30; 
+    public int damage = 1;
+    // Also targeting area but there isn't a variable for it, just resize it in editor
+    // End of Variables that can be altered by upgrading the station
+
+    // Variables that determine HOW MUCH BETTER the station gets by upgrading, base values + these values (USE THIS FOR BALANCING SCRIPT)
+    public float upgradeFireRate = 1;
+    public int upgradeMaxAmmo = 30;
+    public int upgradeDamage = 1;
+    public Vector3 upgradeArea = Vector3.one;
+    // End of section
+
+    private bool ammoShown = false;
 
     private float timer = 1;
     private bool targetsLocated = false;
@@ -21,7 +35,8 @@ public class CandyStationScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ammo = maxAmmo;
+        ammoPopup = GameObject.Find("AmmoPopup");
     }
 
     // Update is called once per frame
@@ -35,6 +50,9 @@ public class CandyStationScript : MonoBehaviour
         if(timer > 1/fireRate && targetsLocated && ammo > 0){
             // take aim at child that is furthest forward
             setTarget();
+        }
+        if(ammoShown){
+            ammoPopup.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = ammo + "/" + maxAmmo;
         }
     }
 
@@ -107,34 +125,39 @@ public class CandyStationScript : MonoBehaviour
 
         enemies.Remove(other.transform);
     }
-    // Add enemy to list of enemies in range
-    // private void OnTriggerEnter2D(Collider2D other) {
-    //     Debug.Log("BEEEPBEEPBEEPBEEP");
-    //     if(other.gameObject.tag == "Enemy"){     
-    //         enemies.Add(other.transform);
-    //         targetsLocated = true;
-    //     }
-    // }
 
-    // Remove enemy from list of enemies in range
-    // private void OnTriggerExit2D(Collider2D other) {
-    //     if(other.transform == currentTarget){
-    //         currentTarget = null;
-    //     }
+    // Candy station upgrade increases the ammo, fire rate, targeting range, and damage of the candy
+    public void upgrade(){
+        //Fill ammo, expand ammo
+        maxAmmo += upgradeMaxAmmo;
+        ammo = maxAmmo;
+        //Faster fire rate
+        fireRate += upgradeFireRate;
+        //More damage
+        damage += upgradeDamage;
+        //bigger targeting area
+        transform.GetChild(0).localScale += upgradeArea;
 
-    //     enemies.Remove(other.transform);
-    // }
+        //Change look of station
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0.22f, 0.75f, 0.7f);
+        
+        //Station is now upgraded
+        gameObject.GetComponent<StationUniversalProperties>().isUpgraded = true;
+    }
 
-    // // when the player mouses over the turret they should get to see the area of effect
-    // // NOTE since the station is a rigibody it adopts the collider of the targeting area, making it so
-    // //  this function runs even when the player mouses over the invisible targeting area
-    // private void OnMouseEnter() {
-    //     gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
-    // }
+    private void OnMouseEnter() {
+        ammoShown = true;
+        ammoPopup.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+        ammoPopup.GetComponent<Image>().enabled = true;
+        ammoPopup.transform.GetChild(0).gameObject.SetActive(true);
+        ammoPopup.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = ammo + "/" + maxAmmo;
+    }
 
-    // private void OnMouseExit() {
-    //     gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
-    // }
+    private void OnMouseExit() {
+        ammoPopup.GetComponent<Image>().enabled = false;
+        ammoPopup.transform.GetChild(0).gameObject.SetActive(false);
+        ammoShown = false;
+    }
 
     // this coroutine is TEMPORARY, and only serves to show that the candy machine is doing something when it fires.
     //  it will be replaced with actual animation later(tm)

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5292229068538705556}
   - component: {fileID: 5292229068538705577}
   - component: {fileID: -3619103535854375546}
-  - component: {fileID: -1958133073185785966}
+  - component: {fileID: -7605293239364235479}
   m_Layer: 6
   m_Name: PillowFinal
   m_TagString: Enemy
@@ -149,8 +149,8 @@ MonoBehaviour:
   enemySpeed: 0.6
   enemyHealth: 6
   pointValue: 150
---- !u!61 &-1958133073185785966
-BoxCollider2D:
+--- !u!70 &-7605293239364235479
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,16 +162,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1, y: 1.5384616}
-    newSize: {x: 0.78, y: 1.13}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.5384616}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.0051679015, y: -0.07062864}
+  m_Size: {x: 1.0896641, y: 1.3972044}
+  m_Direction: 0

@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class SlowStationScript : MonoBehaviour
 {
-    private float fireRate = .2f;
-    public bool isUpgraded = false;
+    
 
     private float timer = 3;
+
+    // Variables that can be altered by upgrading the station
+    public float fireRate = .2f;
     public GameObject slowBomb;
+    // End of Variables that can be altered by upgrading the station
+
+    // Variables that determine HOW MUCH BETTER the station gets by upgrading, base values + these values (USE THIS FOR BALANCING SCRIPT)
+    public float upgradeFireRate = .1f;
+    public GameObject upgradedSlowBomb;
+    //public Vector3 upgradeArea = Vector3.one;
+    // End of section
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +37,22 @@ public class SlowStationScript : MonoBehaviour
 
     void slowAttack(){
         Instantiate(slowBomb, new Vector3(transform.position.x, transform.position.y, transform.position.z+.5f), Quaternion.identity);
+    }
+
+    // Slow station upgrade increase the fire rate and slow effect severity of the slow bomb
+    public void upgrade(){
+        //Faster fire rate
+        fireRate += upgradeFireRate;
+        //More slow
+        //bigger slowing area NOT IMPLEMENTED BECAUSE SLOW IS NOW FREEZE
+        //transform.GetChild(0).localScale += upgradeArea;
+        slowBomb = upgradedSlowBomb;
+
+        //Change look of station
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.6f, 0f);
+
+        //Station is now upgraded
+        gameObject.GetComponent<StationUniversalProperties>().isUpgraded = true;
     }
 
     // // when the player mouses over the turret they should get to see the area of effect

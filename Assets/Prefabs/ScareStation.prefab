@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 870375609449760077}
   m_Layer: 7
   m_Name: ScareStation
-  m_TagString: Untagged
+  m_TagString: ScareStation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.03130834, g: 0.78, b: 0.030437866, a: 1}
+  m_Color: {r: 0.18823424, g: 0.8490566, b: 0.19153118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,8 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a58df133f5d50046a8902ee320ed613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUpgraded: 0
+  fireRate: 0.1
   scareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
+  upgradeFireRate: 0.2
+  upgradedScareBomb: {fileID: 5467841625864554826, guid: 86ae4d88e7e5a9644ae5905b046dba11, type: 3}
 --- !u!114 &778801167461043498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 300
   costToUpgrade: 1000
+  isUpgraded: 0
   isEnabled: 1
   isColliding: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}

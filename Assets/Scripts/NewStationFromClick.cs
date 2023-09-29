@@ -10,7 +10,6 @@ public class NewStationFromClick : MonoBehaviour
    // public GameObject station; //direct reference to prefab for station 
     public GameObject PlayerCurrency; // direct reference to text box for currency
     public GameObject cancelPrompt;
-    //public GameObject PlayerCurrency; // direct reference to text box for currency
     private int stationCost; // will grab a cost reference to the universal script for station properties
 
     // Other
