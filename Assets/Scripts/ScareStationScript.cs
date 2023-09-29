@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class ScareStationScript : MonoBehaviour
 {
-    private float fireRate = .1f;
-    public bool isUpgraded = false;
+    // Variables that can be altered by upgrading the station
+    public float fireRate = .1f;
+    public GameObject scareBomb;
+    // End of Variables that can be altered by upgrading the station
+
+    // Variables that determine HOW MUCH BETTER the station gets by upgrading, base values + these values (USE THIS FOR BALANCING SCRIPT)
+    public float upgradeFireRate = .1f;
+    public GameObject upgradedScareBomb;
+    //public Vector3 upgradeArea = Vector3.one;
+    // End of section
 
     private float timer = 5;
-    public GameObject scareBomb;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +36,22 @@ public class ScareStationScript : MonoBehaviour
 
     void scareAttack(){
         Instantiate(scareBomb, new Vector3(transform.position.x, transform.position.y, transform.position.z+.5f), Quaternion.identity);
+    }
+
+    //Scare station upgrade increases the fire rate, and size of the scare bomb
+    public void upgrade(){
+        //Faster fire rate
+        fireRate += upgradeFireRate;
+        //More slow
+        //bigger slowing area NOT IMPLEMENTED BECAUSE SLOW IS NOW FREEZE
+        //transform.GetChild(0).localScale += upgradeArea;
+        scareBomb = upgradedScareBomb;
+
+        //Change look of station
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+
+        //Station is now upgraded
+        gameObject.GetComponent<StationUniversalProperties>().isUpgraded = true;
     }
 
     // // when the player mouses over the turret they should get to see the area of effect

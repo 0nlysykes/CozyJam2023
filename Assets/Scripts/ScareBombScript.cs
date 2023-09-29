@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,14 @@ using UnityEngine;
 public class ScareBombScript : MonoBehaviour
 {
     private Vector3 scaleChange = new Vector3(.025f, .025f, 0f);
+    public Vector2 maxScale;
     private float timer;
 
     // Update is called once per frame
     void FixedUpdate()
     {
         timer += Time.deltaTime;
-        if(gameObject.transform.localScale.x < 0.5 && gameObject.transform.localScale.y < 0.5){
+        if(gameObject.transform.localScale.x < maxScale.x && gameObject.transform.localScale.y < maxScale.y){
             gameObject.transform.localScale += scaleChange;
         }
         

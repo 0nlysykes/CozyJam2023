@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4496343157906660219}
   m_Layer: 7
   m_Name: CandyStation
-  m_TagString: Untagged
+  m_TagString: CandyStation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,8 +102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4134464dbd7cd8d4eaeedd8ef4690887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammoPopup: {fileID: 0}
+  fireRate: 1
   ammo: 30
-  isUpgraded: 0
+  maxAmmo: 30
+  damage: 1
+  upgradeFireRate: 1
+  upgradeMaxAmmo: 30
+  upgradeDamage: 1
+  upgradeArea: {x: 1, y: 1, z: 1}
 --- !u!61 &4689192263834059380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 100
   costToUpgrade: 500
+  isUpgraded: 0
   isEnabled: 1
   isColliding: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}

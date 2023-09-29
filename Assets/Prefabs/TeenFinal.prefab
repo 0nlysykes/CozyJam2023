@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5292229068538705556}
   - component: {fileID: 5292229068538705577}
   - component: {fileID: -5163575783232048682}
-  - component: {fileID: -9209410302034690585}
+  - component: {fileID: 3029239883526943963}
   m_Layer: 6
   m_Name: TeenFinal
   m_TagString: Enemy
@@ -149,8 +149,8 @@ MonoBehaviour:
   enemySpeed: 0.8
   enemyHealth: 4
   pointValue: 100
---- !u!61 &-9209410302034690585
-BoxCollider2D:
+--- !u!70 &3029239883526943963
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,16 +162,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.76153845, y: 1.4846153}
-    newSize: {x: 0.78, y: 1.13}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.76153845, y: 1.4846153}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.0060887933, y: -0.024354815}
+  m_Size: {x: 0.7189175, y: 1.4359057}
+  m_Direction: 0

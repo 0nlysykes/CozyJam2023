@@ -7,6 +7,7 @@ public class StationUniversalProperties : MonoBehaviour
 {
     public int cost;
     public int costToUpgrade;
+    public bool isUpgraded = false;
     public bool isEnabled = true;
     public bool isColliding = false;
     public Color originalColor;
@@ -44,8 +45,9 @@ public class StationUniversalProperties : MonoBehaviour
     // NOTE since the station is a rigibody it adopts the collider of the targeting area, making it so
     //  this function runs even when the player mouses over the invisible targeting area
     private void OnMouseEnter() {
-        if(upgradeObject.GetComponent<UpgradeStationScript>().upgradingStation){
+        if(upgradeObject.GetComponent<UpgradeStationScript>().upgradingStation && !isUpgraded){
             upgradeObject.GetComponent<UpgradeStationScript>().PopUp("Cost to Upgrade: " + costToUpgrade);
+            upgradeObject.GetComponent<UpgradeStationScript>().upgradeTarget = gameObject;
         } else {
             gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
@@ -54,6 +56,7 @@ public class StationUniversalProperties : MonoBehaviour
     private void OnMouseExit() {
         if(upgradeObject.GetComponent<UpgradeStationScript>().upgradingStation){
             upgradeObject.GetComponent<UpgradeStationScript>().ClosePopUp();
+            upgradeObject.GetComponent<UpgradeStationScript>().upgradeTarget = null;
         } else {
             gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }

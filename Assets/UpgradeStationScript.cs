@@ -12,6 +12,10 @@ public class UpgradeStationScript : MonoBehaviour
     public GameObject cancelPrompt;
     //popUpBox is the pop up that appears to show the player if a station is upgradeable
     public GameObject popUpBox;
+    public GameObject upgradeTarget = null;
+    public GameObject PlayerCurrency;
+
+    private int upgradeCost;
     //public TMP_Text popUpText;
 
     // Start is called before the first frame update
@@ -39,17 +43,39 @@ public class UpgradeStationScript : MonoBehaviour
     }
 
     private void checkForClick(){
-        if (Input.GetMouseButtonDown(0)) // if the player clicks, then drop the station on that spot
+        if (Input.GetMouseButtonDown(0) && upgradeTarget != null) // if the player clicks, try to upgrade the station the mouse is over
         {
-            transform.GetChild(0).gameObject.SetActive(true);
-            cancelUpgrade();
-            //else if covers if game is paused, deleting the station if it is
+            if(CheckForValidCurrency()){
+                switch(upgradeTarget.gameObject.tag){
+                    case "CandyStation":
+                        upgradeTarget.GetComponent<CandyStationScript>().upgrade();
+                        break;
+                    case "SlowStation":
+                        upgradeTarget.GetComponent<SlowStationScript>().upgrade();
+                        break;
+                    case "ScareStation":
+                        upgradeTarget.GetComponent<ScareStationScript>().upgrade();
+                        break;
+                    default:
+                        break;
+                }
+                PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*upgradeCost);
+                transform.GetChild(0).gameObject.SetActive(true);
+                cancelUpgrade(); 
+            }
+            
+            //else if covers if game is paused, deleting the upgrad UI if it is
         } else if(Input.GetMouseButtonDown(1)){
             transform.GetChild(0).gameObject.SetActive(true);
             cancelUpgrade();
         } else if (GameObject.Find("PauseCanvas").GetComponent<PauseScript>().isPaused){
             cancelUpgrade();
         }
+    }
+
+    public bool CheckForValidCurrency(){
+        upgradeCost = upgradeTarget.GetComponent<StationUniversalProperties>().costToUpgrade;
+        return PlayerCurrency.GetComponent<MoneyScript>().getValue()>upgradeCost;
     }
 
     private void cancelUpgrade(){

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - CandyStation
+  - SlowStation
+  - ScareStation
   layers:
   - Default
   - TransparentFX

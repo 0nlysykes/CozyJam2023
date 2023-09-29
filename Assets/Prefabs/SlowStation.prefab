@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 5855780999963462422}
   m_Layer: 7
   m_Name: SlowStation
-  m_TagString: Untagged
+  m_TagString: SlowStation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,8 +250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5399d7c2079e5a0408ee67d7dd5ea242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUpgraded: 0
+  fireRate: 0.2
   slowBomb: {fileID: 3692693503399732373, guid: 8c40f174860357e469cb115043f6e384, type: 3}
+  upgradeFireRate: 0.1
+  upgradedSlowBomb: {fileID: 3908069732654628841, guid: d0857f316b400bf4a8ca9873af390287, type: 3}
+  upgradeArea: {x: 1, y: 1, z: 1}
 --- !u!114 &2838723900994554284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 200
   costToUpgrade: 700
+  isUpgraded: 0
   isEnabled: 1
   isColliding: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}

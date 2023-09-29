@@ -171,28 +171,26 @@ public class EnemyScript : MonoBehaviour
         Destroy(gameObject); // destroy the enemy as soon as it has faded completely
     }
 
-    public void slowDown(){
-        StartCoroutine(SlowCoroutine()); 
+    public void slowDown(float slowValue, float slowDuration){
+        StartCoroutine(SlowCoroutine(slowValue, slowDuration)); 
     }
 
-    IEnumerator SlowCoroutine()
+    IEnumerator SlowCoroutine(float slowValue, float slowDuration)
     {
         
         if (!slowed)
         {
             animator.SetBool("Sad", !sad);
             animator.SetBool("IsSlowed", !IsSlowed);
-            enemySpeed = enemySpeed * .6f;
+            enemySpeed = enemySpeed * slowValue;
             slowed = true;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(slowDuration);
         if(slowed)
         {
             animator.SetBool("Sad", sad);
             animator.SetBool("IsSlowed", IsSlowed);
-            enemySpeed = enemySpeed / .6f;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            enemySpeed = enemySpeed / slowValue;
             slowed = false;
         }
     }
