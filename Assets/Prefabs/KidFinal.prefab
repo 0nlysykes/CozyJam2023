@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5292229068538705556}
   - component: {fileID: 5292229068538705577}
   - component: {fileID: -4597569094488370493}
-  - component: {fileID: 807346137599575142}
+  - component: {fileID: 3183732686452176546}
   m_Layer: 6
   m_Name: KidFinal
   m_TagString: Enemy
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5292229068538705554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2441282, y: -3.1705828, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.2441282, y: -3.1705828, z: -2}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,8 +149,8 @@ MonoBehaviour:
   enemySpeed: 1
   enemyHealth: 2
   pointValue: 50
---- !u!61 &807346137599575142
-BoxCollider2D:
+--- !u!70 &3183732686452176546
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,16 +162,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78, y: 1.13}
-    newSize: {x: 0.78, y: 1.13}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.78, y: 1.13}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.0025137067, y: -0.16590285}
+  m_Size: {x: 0.64928854, y: 0.7981944}
+  m_Direction: 0

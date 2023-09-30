@@ -62,21 +62,21 @@ public class EnemySpawns : MonoBehaviour
             // spawn check for small kids
             if (SpawnTimer >= smallTimeInterval * x)
             {
-                GameObject smallChild = Instantiate(SmallChild, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
+                GameObject smallChild = Instantiate(SmallChild, WaypointsParent.transform.GetChild(0).transform.position - new Vector3(0, 0, 2), Quaternion.identity);
                 x++; // this variable keeps track of intervals passed
                 enemyCount++;
             }
             // spawn check for teenagers
             if (SpawnTimer >= teenTimeInterval * y)
             {
-                GameObject teenager = Instantiate(Teenager, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
+                GameObject teenager = Instantiate(Teenager, WaypointsParent.transform.GetChild(0).transform.position - new Vector3(0, 0, 2), Quaternion.identity);
                 y++; // this variable keeps track of intervals passed
                 enemyCount++; //UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
             }
             // spawn check for pillowsack kids
             if (SpawnTimer >= pillowsackTimeInterval * z)
             {
-                GameObject pillowsackKid = Instantiate(PillowsackKid, WaypointsParent.transform.GetChild(0).transform.position, Quaternion.identity);
+                GameObject pillowsackKid = Instantiate(PillowsackKid, WaypointsParent.transform.GetChild(0).transform.position - new Vector3(0, 0, 2), Quaternion.identity);
                 z++; // this variable keeps track of intervals passed
                 enemyCount++; //UNCOMMENT THIS YOU FOOLS DFDS FJSDBV ILSFBVFSVB SPVHYSDBP VSCBDVP SDVBSDPIVBSDPVBSDPIUVBSDPUVBSDFIVBSDOIVBSCIVBSCDFHUVBSDVIUBDSVUHBSDPVUIBSCFVPUSIBCVPISDUBVSDPIVUBSDPIVUBSDPVUBHSDPVUBSDVPUSDBVSDPVBSD
             }

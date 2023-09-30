@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5237337568963080615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.25, y: -1.73, z: 0}
+  m_LocalPosition: {x: 3.25, y: -1.73, z: 1}
   m_LocalScale: {x: 0.7538, y: 0.723, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -254,7 +254,6 @@ MonoBehaviour:
   slowBomb: {fileID: 3692693503399732373, guid: 8c40f174860357e469cb115043f6e384, type: 3}
   upgradeFireRate: 0.1
   upgradedSlowBomb: {fileID: 3908069732654628841, guid: d0857f316b400bf4a8ca9873af390287, type: 3}
-  upgradeArea: {x: 1, y: 1, z: 1}
 --- !u!114 &2838723900994554284
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -51,6 +51,7 @@ public class NewStationFromClick : MonoBehaviour
                 spawningStation = false;
                 cancelPrompt.gameObject.SetActive(false);
                 newstation.gameObject.GetComponentInChildren<CircleCollider2D>().enabled = true;
+                newstation.transform.position = newstation.transform.position + new Vector3(0,0,1);
                 enableScripts(); // reactivate the station's script's once placed
                 newstation.gameObject.GetComponent<StationUniversalProperties>().isEnabled = false;
                 PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*stationCost);
