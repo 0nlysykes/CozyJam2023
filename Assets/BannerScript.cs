@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class BannerScript : MonoBehaviour
 {
     public GameObject bannerText;
+    public GameObject subText;
     public GameObject pauseCanvas;
+    public GameObject roundCounter;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,28 +31,13 @@ public class BannerScript : MonoBehaviour
     }
 
     public IEnumerator RoundEnd(float roundNumber){
-        switch(roundNumber){
-            case 1:
-                bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "6:00 PM";
-                break;
-            case 2:
-                bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "7:00 PM";
-                break;
-            case 3:
-                bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "8:00 PM";
-                break;
-            case 4:
-                bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "9:00 PM";
-                break;
-            case 5:
-                bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "10:00 PM";
-                break;
-            case 6:
-                bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "11:00 PM";
-                break;
-            default:
-                bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "";
-                break;
+        bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = (roundNumber + 5).ToString() + ":00 PM";
+        if(7-roundNumber == 1){
+            subText.GetComponent<TMPro.TextMeshProUGUI>().text = (7-roundNumber) + " hour until midnight";
+            roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = (7 - roundNumber).ToString() +" hour until midnight";
+        } else {
+            subText.GetComponent<TMPro.TextMeshProUGUI>().text = (7-roundNumber).ToString() + " hours until midnight";
+            roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = (7 - roundNumber).ToString() +" hours until midnight";
         }
         StartCoroutine(FadeTo(1,1));
         Time.timeScale = 0;
@@ -73,6 +60,7 @@ public class BannerScript : MonoBehaviour
         StartCoroutine(FadeTo(1,2));
         // Other victory animations and sounds can go here
         bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "Midnight!\nYou Win!";
+        subText.GetComponent<TMPro.TextMeshProUGUI>().text = "";
         GameObject.Find("StationUICanvas").SetActive(false);
         yield return new WaitForSeconds(3);
         foreach(Transform child in bannerText.transform){
@@ -87,18 +75,21 @@ public class BannerScript : MonoBehaviour
     IEnumerator FadeTo(float desiredAlpha, float desiredTime)
     {
         TMP_Text textField = bannerText.GetComponent<TMP_Text>();
+        TMP_Text subTextField = subText.GetComponent<TMP_Text>();
         float alpha = textField.color.a;
         Color newColor = Color.white;
         for (float t = 0.0f; t < 1.0f; t += Time.unscaledDeltaTime / desiredTime)
         {
             newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, desiredAlpha, t));
             textField.color = newColor;
+            subTextField.color = newColor;
             yield return null;
         }
         if (newColor.a > 0 && desiredAlpha == 0)
         {
             newColor.a = 0;
             textField.color = newColor;
+            subTextField.color = newColor;
         }
     }
 }

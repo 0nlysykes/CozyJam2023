@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CandyStationScript : MonoBehaviour
 {
 
-    public GameObject ammoPopup;
+    private GameObject ammoPopup;
     
     // Variables that can be altered by upgrading the station
     public float fireRate = 1;
@@ -146,17 +146,21 @@ public class CandyStationScript : MonoBehaviour
     }
 
     private void OnMouseEnter() {
-        ammoShown = true;
-        ammoPopup.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-        ammoPopup.GetComponent<Image>().enabled = true;
-        ammoPopup.transform.GetChild(0).gameObject.SetActive(true);
-        ammoPopup.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = ammo + "/" + maxAmmo;
+        if(enabled){
+            ammoShown = true;
+            ammoPopup.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+            ammoPopup.GetComponent<Image>().enabled = true;
+            ammoPopup.transform.GetChild(0).gameObject.SetActive(true);
+            ammoPopup.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = ammo + "/" + maxAmmo;
+        }
     }
 
     private void OnMouseExit() {
-        ammoPopup.GetComponent<Image>().enabled = false;
-        ammoPopup.transform.GetChild(0).gameObject.SetActive(false);
-        ammoShown = false;
+        if(enabled){
+            ammoPopup.GetComponent<Image>().enabled = false;
+            ammoPopup.transform.GetChild(0).gameObject.SetActive(false);
+            ammoShown = false;
+        }
     }
 
     // this coroutine is TEMPORARY, and only serves to show that the candy machine is doing something when it fires.
