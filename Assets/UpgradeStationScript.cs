@@ -37,7 +37,9 @@ public class UpgradeStationScript : MonoBehaviour
     public void UpgradeTime(){
         Cursor.SetCursor(upgradeCursor, Vector2.zero, CursorMode.Auto);
         upgradingStation = true;
-        transform.GetChild(0).gameObject.SetActive(false);
+        foreach (Transform child in transform){
+            child.gameObject.SetActive(false);
+        }
         cancelPrompt.gameObject.SetActive(true);
         Update();
     }
@@ -45,7 +47,7 @@ public class UpgradeStationScript : MonoBehaviour
     private void checkForClick(){
         if (Input.GetMouseButtonDown(0) && upgradeTarget != null) // if the player clicks, try to upgrade the station the mouse is over
         {
-            if(CheckForValidCurrency()){
+            if(CheckForValidCurrency() && !upgradeTarget.GetComponent<StationUniversalProperties>().isUpgraded){
                 switch(upgradeTarget.gameObject.tag){
                     case "CandyStation":
                         upgradeTarget.GetComponent<CandyStationScript>().upgrade();
@@ -60,13 +62,17 @@ public class UpgradeStationScript : MonoBehaviour
                         break;
                 }
                 PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*upgradeCost);
-                transform.GetChild(0).gameObject.SetActive(true);
+                foreach (Transform child in transform){
+                    child.gameObject.SetActive(true);
+                }
                 cancelUpgrade(); 
             }
             
-            //else if covers if game is paused, deleting the upgrad UI if it is
+            //else if covers if game is paused, deleting the upgrade UI if it is
         } else if(Input.GetMouseButtonDown(1)){
-            transform.GetChild(0).gameObject.SetActive(true);
+            foreach (Transform child in transform){
+                child.gameObject.SetActive(true);
+            }
             cancelUpgrade();
         } else if (GameObject.Find("PauseCanvas").GetComponent<PauseScript>().isPaused){
             cancelUpgrade();

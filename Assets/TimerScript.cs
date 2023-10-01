@@ -6,7 +6,7 @@ using System;
 
 public class TimerScript : MonoBehaviour
 {
-    public static float timer = 0;
+    //public static float timer = 0;
     public GameObject textToChange;
     public GameObject roundCounter;
     // Start is called before the first frame update
@@ -18,8 +18,6 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        TimeSpan time = TimeSpan.FromSeconds(timer);
-        textToChange.GetComponent<TMPro.TextMeshProUGUI>().text = (roundCounter.GetComponent<EnemySpawns>().roundNumber + 5).ToString() +":"+ time.ToString(@"ss") + " PM";
+        textToChange.GetComponent<TMPro.TextMeshProUGUI>().text = (7 - roundCounter.GetComponent<EnemySpawns>().roundNumber).ToString() +" hours until midnight";
     }
 }
