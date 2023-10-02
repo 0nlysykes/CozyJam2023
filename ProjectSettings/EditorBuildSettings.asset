@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 94ca46989c3702740949b174f6622516
   - enabled: 1
-    path: Assets/Scenes/BackYard.unity
+    path: Assets/Scenes/StageSelect.unity
     guid: 06a4d45d3ff233b4e9c99c351efed005
   - enabled: 1
     path: Assets/Scenes/LossScene.unity

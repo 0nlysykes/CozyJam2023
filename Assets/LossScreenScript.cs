@@ -26,6 +26,6 @@ public class LossScreenScript : MonoBehaviour
     }
 
     public void retryGame(){
-        SceneManager.LoadScene(MainMenuScript.whichYard); //MainMenuScript.whichYard
+        SceneManager.LoadScene(1); //MainMenuScript.stageSelect
     }
 }

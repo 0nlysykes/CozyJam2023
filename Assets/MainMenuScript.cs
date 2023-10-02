@@ -18,15 +18,28 @@ public class MainMenuScript : MonoBehaviour
         
     }
 
-    public void frontYard(){
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+    }
+
+    public void firstYard(){
         whichYard = 1;
         SceneManager.LoadScene(1);
     }
 
-    public void backYard(){
-        whichYard = 2;
+    public void stageSelect()
+    {
         SceneManager.LoadScene(2);
     }
+
+
+    /*public void secondYard()
+    {
+        whichYard = 2;
+        SceneManager.LoadScene(2);
+    }*/
 
     public void credits()
     {
