@@ -4867,7 +4867,7 @@ MonoBehaviour:
   scareStationCostToUpgrade: 100
   scareStationAddedFireRate: 0.1
   scareStationUpgradeSizeMax: {x: 1, y: 1}
-  totalRoundTime: 59
+  totalRoundTime: 20
   startingPoints: 50
 --- !u!1 &488123438
 GameObject:
@@ -10059,6 +10059,7 @@ GameObject:
   - component: {fileID: 1047715899}
   - component: {fileID: 1047715898}
   - component: {fileID: 1047715897}
+  - component: {fileID: 1047715902}
   m_Layer: 5
   m_Name: BannerCanvas
   m_TagString: Untagged
@@ -10165,6 +10166,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1047715902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047715896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8aaa82dc7e8589479eb942c0a26b5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1056658565
 GameObject:
   m_ObjectHideFlags: 0

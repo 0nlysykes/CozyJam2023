@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class EndTimer : MonoBehaviour
 {
     public GameObject EndTimeLabel;
+    public GameObject Hours;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,8 @@ public class EndTimer : MonoBehaviour
 
     private void Awake()
     {
+        EndTimeLabel.GetComponent<TMPro.TextMeshProUGUI>().text = RoundCount.RoundCounter.ToString();
+        Hours.GetComponent<TMPro.TextMeshProUGUI>().text = "Hours".ToString();
         //EndTimeLabel.GetComponent<TMPro.TextMeshProUGUI>().text = TimeSpan.FromSeconds(TimerScript.timer).ToString(@"mm\:ss");
         //TimerScript.timer = 0;
     }
