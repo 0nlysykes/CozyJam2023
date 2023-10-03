@@ -10,6 +10,7 @@ public class BannerScript : MonoBehaviour
     public GameObject subText;
     public GameObject pauseCanvas;
     public GameObject roundCounter;
+    public float roundNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,7 @@ public class BannerScript : MonoBehaviour
         }
         StartCoroutine(FadeTo(0,1));
         Time.timeScale = 1;
+        roundNum = 7 - roundNumber; // keep track for loss screen
     }
 
     public IEnumerator Victory()
