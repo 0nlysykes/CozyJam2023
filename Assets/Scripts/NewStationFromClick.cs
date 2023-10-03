@@ -10,6 +10,9 @@ public class NewStationFromClick : MonoBehaviour
    // public GameObject station; //direct reference to prefab for station 
     public GameObject PlayerCurrency; // direct reference to text box for currency
     public GameObject cancelPrompt;
+    public GameObject candyStationCost;
+    public GameObject slowStationCost;
+    public GameObject scareStationCost;
     private int stationCost; // will grab a cost reference to the universal script for station properties
 
     // Other
@@ -21,7 +24,7 @@ public class NewStationFromClick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // access balancescript to get values for candy, slow, and scare station cost
     }
 
     // Update is called once per frame
