@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d0cf6472eafd6147b2dbb4b29058e86
+guid: 4ca88e2f5befb374a9a8631decd465b6
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -10,8 +10,7 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - CSNPWDT NFI
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: edd87ed69ede336449d3b2f389bd440d, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
