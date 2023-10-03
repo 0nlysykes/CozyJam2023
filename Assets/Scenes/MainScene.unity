@@ -4690,6 +4690,7 @@ GameObject:
   - component: {fileID: 486894534}
   - component: {fileID: 486894533}
   - component: {fileID: 486894536}
+  - component: {fileID: 486894537}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4772,7 +4773,7 @@ MonoBehaviour:
   - 1.4
   - 1.2
   - 1
-  smallTimeInterval: 100
+  smallTimeInterval: 0
   Teenager: {fileID: 5292229068538705554, guid: 56ab5fb12d0f94343b3944374e742732, type: 3}
   teenagerSpawnRates:
   - 6
@@ -4781,7 +4782,7 @@ MonoBehaviour:
   - 4.8
   - 4.4
   - 4
-  teenTimeInterval: 6
+  teenTimeInterval: 0
   PillowsackKid: {fileID: 5292229068538705554, guid: e401ae968b829984cb8473bfd338aff7, type: 3}
   pillowsackSpawnRates:
   - 10
@@ -4790,8 +4791,84 @@ MonoBehaviour:
   - 7
   - 6
   - 5
-  pillowsackTimeInterval: 100
+  pillowsackTimeInterval: 0
   enemyCount: 0
+--- !u!114 &486894537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486894532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6b15446306e6d42b4ac57761c6fd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallChildSpeed: 1
+  smallChildHealth: 2
+  smallChildPointValue: 5
+  smallChildSpawnRatesByRound:
+  - 2
+  - 1.8
+  - 1.6
+  - 1.4
+  - 1.2
+  - 1
+  teenagerSpeed: 2
+  teenagerHealth: 4
+  teenagerPointValue: 10
+  teenagerSpawnRatesByRound:
+  - 6
+  - 5.6
+  - 5.2
+  - 4.8
+  - 4.4
+  - 4
+  pillowsackSpeed: 0.5
+  pillowsackHealth: 8
+  pillowsackPointValue: 15
+  pillowsackSpawnRatesByRound:
+  - 10
+  - 9
+  - 8
+  - 7
+  - 6
+  - 5
+  SmallChild: {fileID: 5292229068538705554, guid: 0bda16bf4b378994dabbf0c49b38b10b, type: 3}
+  Teenager: {fileID: 5292229068538705554, guid: 56ab5fb12d0f94343b3944374e742732, type: 3}
+  PillowsackKid: {fileID: 5292229068538705554, guid: e401ae968b829984cb8473bfd338aff7, type: 3}
+  CandyStation: {fileID: 4689192263834059343, guid: 14d7a7b3deccd484ea114609a7023341, type: 3}
+  SlowStation: {fileID: 5237337568963080615, guid: 8ad81a2348e8ca548aa995f0c033433e, type: 3}
+  SlowStationSlowBomb: {fileID: 3692693503399732373, guid: 8c40f174860357e469cb115043f6e384, type: 3}
+  SlowStationUpgradedSlowBomb: {fileID: 3908069732654628841, guid: d0857f316b400bf4a8ca9873af390287, type: 3}
+  ScareStation: {fileID: 6207383797615922401, guid: a03536e2f2143ec4384521362a64336e, type: 3}
+  ScareStationScareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
+  ScareStationUpgradedScareBomb: {fileID: 5467841625864554826, guid: 86ae4d88e7e5a9644ae5905b046dba11, type: 3}
+  candyStationFireRate: 1
+  candyStationAmmo: 30
+  candyStationMaxAmmo: 30
+  candyStationDamage: 1
+  candyStationCost: 10
+  candyStationCostToUpgrade: 30
+  candyStationAddedFireRate: 1
+  candyStationAddedMaxAmmo: 30
+  candyStationAddedDamage: 1
+  candyStationAddedArea: {x: 1, y: 1, z: 1}
+  slowStationFireRate: 0.2
+  slowStationSizeMax: {x: 1, y: 1}
+  slowStationCost: 20
+  slowStationCostToUpgrade: 50
+  slowStationAddedFireRate: 0.1
+  slowStationUpgradeSizeMax: {x: 2, y: 2}
+  scareStationFireRate: 0.1
+  scareStationSizeMax: {x: 0.5, y: 0.5}
+  scareStationCost: 50
+  scareStationCostToUpgrade: 100
+  scareStationAddedFireRate: 0.1
+  scareStationUpgradeSizeMax: {x: 1, y: 1}
+  totalRoundTime: 59
+  startingPoints: 50
 --- !u!1 &488123438
 GameObject:
   m_ObjectHideFlags: 0
@@ -19910,6 +19987,7 @@ MonoBehaviour:
   scaleChange: {x: 0.015, y: 0.015, z: 0}
   slowValue: 0.6
   slowDuration: 3
+  maxScale: {x: 0, y: 0}
 --- !u!58 &211851591235264093
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -10,18 +10,21 @@ public class BalanceScript : MonoBehaviour
     // Small child
     public float smallChildSpeed;
     public int smallChildHealth;
+    public int smallChildPointValue;
     public float[] smallChildSpawnRatesByRound = { 2, 1.8f, 1.6f, 1.4f, 1.2f, 1f };//new float[6];
     //
 
     // Teenager
     public float teenagerSpeed;
     public int teenagerHealth;
+    public int teenagerPointValue;
     public float[] teenagerSpawnRatesByRound = { 6, 5.6f, 5.2f, 4.8f, 4.4f, 4f };// new float[6];
     //
 
     // Pillowsack Kid
     public float pillowsackSpeed;
     public int pillowsackHealth;
+    public int pillowsackPointValue;
     public float[] pillowsackSpawnRatesByRound = { 10, 9f, 8f, 7f, 6f, 5f };//new float[6];
     //
 
@@ -82,6 +85,7 @@ public class BalanceScript : MonoBehaviour
 
     //////// Round
     public float totalRoundTime;
+    public int startingPoints;
 
 
     // Start is called before the first frame update
@@ -97,10 +101,13 @@ public class BalanceScript : MonoBehaviour
         // Set Health and Speed Values by Kid Across the level
         SmallChild.GetComponent<EnemyScript>().enemyHealth = smallChildHealth;
         SmallChild.GetComponent<EnemyScript>().enemySpeed = smallChildSpeed;
+        SmallChild.GetComponent<EnemyScript>().pointValue = smallChildPointValue;
         Teenager.GetComponent<EnemyScript>().enemyHealth = teenagerHealth;
         Teenager.GetComponent<EnemyScript>().enemySpeed = teenagerSpeed;
+        Teenager.GetComponent<EnemyScript>().pointValue = teenagerPointValue;
         PillowsackKid.GetComponent<EnemyScript>().enemyHealth = pillowsackHealth;
         PillowsackKid.GetComponent<EnemyScript>().enemySpeed = pillowsackSpeed;
+        PillowsackKid.GetComponent<EnemyScript>().pointValue = pillowsackPointValue;
         //
 
         // Set Candy Station Stats
