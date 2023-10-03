@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeStationScript : MonoBehaviour
 {
@@ -31,6 +32,13 @@ public class UpgradeStationScript : MonoBehaviour
             //spawningStation = false;
             FollowMouse();
             checkForClick();
+        }
+        if(popUpBox.activeSelf){
+            if(!CheckForValidCurrency()){
+                popUpBox.GetComponent<Image>().color = new Color(0.7764706f, 0.3058824f, 0.172549f, 1);
+            } else {
+                popUpBox.GetComponent<Image>().color = Color.white;
+            }
         }
     }
 
@@ -81,7 +89,7 @@ public class UpgradeStationScript : MonoBehaviour
 
     public bool CheckForValidCurrency(){
         upgradeCost = upgradeTarget.GetComponent<StationUniversalProperties>().costToUpgrade;
-        return PlayerCurrency.GetComponent<MoneyScript>().getValue()>upgradeCost;
+        return PlayerCurrency.GetComponent<MoneyScript>().getValue()>=upgradeCost;
     }
 
     private void cancelUpgrade(){
@@ -97,11 +105,11 @@ public class UpgradeStationScript : MonoBehaviour
 
     public void PopUp(string text){
         popUpBox.SetActive(true);
-        //popUpText.text = text;
         popUpBox.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = text;
     }
 
     public void ClosePopUp(){
+        popUpBox.GetComponent<Image>().color = Color.white;
         popUpBox.SetActive(false);
     }
 }

@@ -33,8 +33,8 @@ public class BannerScript : MonoBehaviour
     public IEnumerator RoundEnd(float roundNumber){
         bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = (roundNumber + 5).ToString() + ":00 PM";
         if(7-roundNumber == 1){
-            subText.GetComponent<TMPro.TextMeshProUGUI>().text = (7-roundNumber) + " hour until midnight";
-            roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = (7 - roundNumber).ToString() +" hour until midnight";
+            subText.GetComponent<TMPro.TextMeshProUGUI>().text = "1 hour until midnight";
+            roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = "1 hour until midnight";
         } else {
             subText.GetComponent<TMPro.TextMeshProUGUI>().text = (7-roundNumber).ToString() + " hours until midnight";
             roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = (7 - roundNumber).ToString() +" hours until midnight";

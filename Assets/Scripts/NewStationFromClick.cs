@@ -10,9 +10,9 @@ public class NewStationFromClick : MonoBehaviour
    // public GameObject station; //direct reference to prefab for station 
     public GameObject PlayerCurrency; // direct reference to text box for currency
     public GameObject cancelPrompt;
-    public GameObject candyStationCost;
-    public GameObject slowStationCost;
-    public GameObject scareStationCost;
+    // public GameObject candyStationCost;
+    // public GameObject slowStationCost;
+    // public GameObject scareStationCost;
     private int stationCost; // will grab a cost reference to the universal script for station properties
 
     // Other
@@ -57,10 +57,10 @@ public class NewStationFromClick : MonoBehaviour
                 newstation.transform.position = newstation.transform.position + new Vector3(0,0,1);
                 enableScripts(); // reactivate the station's script's once placed
                 newstation.gameObject.GetComponent<StationUniversalProperties>().isEnabled = false;
-                PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*stationCost);
                 foreach (Transform child in transform){
                     child.gameObject.SetActive(true);
                 }
+                PlayerCurrency.GetComponent<MoneyScript>().changeValue(-1*stationCost);
                 cancelPrompt.gameObject.SetActive(false);
             }
             //else if covers if game is paused, deleting the station if it is
@@ -129,6 +129,6 @@ public class NewStationFromClick : MonoBehaviour
     {
         stationCost = station.GetComponent<StationUniversalProperties>().cost; //get the cost of the station
         moneyValue = PlayerCurrency.GetComponent<MoneyScript>().getValue();
-        return moneyValue>stationCost;
+        return moneyValue>=stationCost;
     }
 }

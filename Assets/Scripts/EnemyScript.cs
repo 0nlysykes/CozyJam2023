@@ -160,7 +160,6 @@ public class EnemyScript : MonoBehaviour
 
     IEnumerator FadeTo(float desiredAlpha, float desiredTime)
     {
-        Debug.Log("fade time");
         float alpha = gameObject.GetComponent<SpriteRenderer>().color.a;
         Color newColor = Color.white;
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / desiredTime)
