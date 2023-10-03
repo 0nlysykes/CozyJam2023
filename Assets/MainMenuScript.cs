@@ -26,12 +26,24 @@ public class MainMenuScript : MonoBehaviour
 
     public void firstYard(){
         whichYard = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void secondYard()
+    {
+        whichYard = 2;
+        SceneManager.LoadScene("MediumLevel");
+    }
+
+    public void thirdYard()
+    {
+        whichYard = 3;
+        SceneManager.LoadScene("HardLevel");
     }
 
     public void stageSelect()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("StageSelect");
     }
 
 
