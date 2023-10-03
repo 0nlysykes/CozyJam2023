@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: edd87ed69ede336449d3b2f389bd440d
+guid: ead4b8732d116244eb167ca9025d57e2
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - CSNPWDT NFI
-  fallbackFontReferences: []
+  - Henny Penny
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4a22ab791a9a7194aa785b0b3c5a1277, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
