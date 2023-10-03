@@ -114,3 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842b56805d465274a91fc281b15927c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleChange: {x: 0.015, y: 0.015, z: 0}
+  slowValue: 0.6
+  slowDuration: 3
+  maxScale: {x: 0, y: 0}

@@ -7,13 +7,15 @@ public class SlowBombScript : MonoBehaviour
     public Vector3 scaleChange = new Vector3(.015f, .015f, 0f);
     public float slowValue = 0.6f;
     public float slowDuration = 3;
+    public Vector2 maxScale;
     private float timer;
 
     // Update is called once per frame
     void FixedUpdate()
     {
         timer += Time.deltaTime;
-        if(gameObject.transform.localScale.x < 0.5 && gameObject.transform.localScale.y < 0.5){
+        if(gameObject.transform.localScale.x < maxScale.x && gameObject.transform.localScale.y < maxScale.y)
+        {
             gameObject.transform.localScale += scaleChange;
         }
         
