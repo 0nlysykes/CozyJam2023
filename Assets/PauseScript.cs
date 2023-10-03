@@ -19,30 +19,37 @@ public class PauseScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause") && !isPaused)
         {
-            savedTimeScale= Time.timeScale;
-            //transform.GetChild(0).gameObject.SetActive(true);
-            GameObject.Find("BannerText").GetComponent<TMP_Text>().enabled = false;
-            //GameObject.Find("StationUICanvas").transform.GetChild(0).gameObject.SetActive(false);
-            foreach (Transform child in GameObject.Find("StationUICanvas").transform){
-                child.gameObject.SetActive(false);
-            }
-            //AudioListener.pause = true;
-            Time.timeScale = 0; 
-            isPaused = true;
-
+            Pause();
         } 
         else if (Input.GetButtonDown("Pause") && isPaused)
         {
             Unpause();
         }
+        
+    }
+
+    public void Pause(){
+        savedTimeScale= Time.timeScale;
+        //transform.GetChild(0).gameObject.SetActive(true);
+        GameObject.Find("BannerText").GetComponent<TMP_Text>().enabled = false;
+        GameObject.Find("BannerSubtext").GetComponent<TMP_Text>().enabled = false;
+        //GameObject.Find("StationUICanvas").transform.GetChild(0).gameObject.SetActive(false);
+        foreach (Transform child in GameObject.Find("StationUICanvas").transform){
+            child.gameObject.SetActive(false);
+        }
+        //AudioListener.pause = true;
+        Time.timeScale = 0; 
+        isPaused = true;
         // Set children to be visible/invisible
         foreach (Transform child in transform)
-            child.gameObject.SetActive(isPaused);
+            if(child.name != "PauseButton")
+                child.gameObject.SetActive(true);
     }
 
     public void Unpause()
     {
         GameObject.Find("BannerText").GetComponent<TMP_Text>().enabled = true;
+        GameObject.Find("BannerSubtext").GetComponent<TMP_Text>().enabled = true;
         //GameObject.Find("StationUICanvas").transform.GetChild(0).gameObject.SetActive(true);
         foreach (Transform child in GameObject.Find("StationUICanvas").transform){
             child.gameObject.SetActive(true);
@@ -51,6 +58,18 @@ public class PauseScript : MonoBehaviour
         //AudioListener.pause = false;
         Time.timeScale = savedTimeScale;
         isPaused = false;
+        // Set children to be visible/invisible
+        foreach (Transform child in transform)
+            if(child.name != "PauseButton")
+                child.gameObject.SetActive(false);
+    }
+
+    public void ButtonHandler(){
+        if(isPaused){
+            Unpause();
+        } else {
+            Pause();
+        }
     }
     
 }
