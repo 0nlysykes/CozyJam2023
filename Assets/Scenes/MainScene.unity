@@ -2403,7 +2403,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -41.9, y: -2.2}
-  m_SizeDelta: {x: 129.897, y: 62.1891}
+  m_SizeDelta: {x: 150, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237985212
 MonoBehaviour:
@@ -2425,8 +2425,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6d8c9058ab85a094a966ff5de458e5d0, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 4eade859acaaaa64aa5d5e2fc5867f16, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -13521,6 +13521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyTotal: 1000
+  candyStationButton: {fileID: 360956496}
+  slowStationButton: {fileID: 2012495849}
+  scareStationButton: {fileID: 1333899540}
 --- !u!1 &1501280928
 GameObject:
   m_ObjectHideFlags: 0
@@ -19407,9 +19410,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCurrency: {fileID: 1469657523}
   cancelPrompt: {fileID: 1868589908}
-  candyStationCost: {fileID: 0}
-  slowStationCost: {fileID: 0}
-  scareStationCost: {fileID: 0}
 --- !u!114 &2091605576
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -46,8 +46,8 @@ public class StationUniversalProperties : MonoBehaviour
     //  this function runs even when the player mouses over the invisible targeting area
     private void OnMouseEnter() {
         if(upgradeObject.GetComponent<UpgradeStationScript>().upgradingStation && !isUpgraded){
-            upgradeObject.GetComponent<UpgradeStationScript>().PopUp("Cost to Upgrade: " + costToUpgrade);
             upgradeObject.GetComponent<UpgradeStationScript>().upgradeTarget = gameObject;
+            upgradeObject.GetComponent<UpgradeStationScript>().PopUp("Cost to Upgrade: " + costToUpgrade);
         } else {
             gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
