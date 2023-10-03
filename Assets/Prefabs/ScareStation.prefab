@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 0.1
   scareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
-  upgradeFireRate: 0.2
+  upgradeFireRate: 0.1
   upgradedScareBomb: {fileID: 5467841625864554826, guid: 86ae4d88e7e5a9644ae5905b046dba11, type: 3}
 --- !u!114 &778801167461043498
 MonoBehaviour:

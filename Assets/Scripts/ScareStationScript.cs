@@ -5,12 +5,12 @@ using UnityEngine;
 public class ScareStationScript : MonoBehaviour
 {
     // Variables that can be altered by upgrading the station
-    public float fireRate = .1f;
+    public float fireRate;
     public GameObject scareBomb;
     // End of Variables that can be altered by upgrading the station
 
     // Variables that determine HOW MUCH BETTER the station gets by upgrading, base values + these values (USE THIS FOR BALANCING SCRIPT)
-    public float upgradeFireRate = .1f;
+    public float upgradeFireRate;
     public GameObject upgradedScareBomb;
     //public Vector3 upgradeArea = Vector3.one;
     // End of section

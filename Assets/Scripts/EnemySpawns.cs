@@ -14,19 +14,19 @@ public class EnemySpawns : MonoBehaviour
 
     // small enemy spawner details
     public GameObject SmallChild;
-    public float[] smallChildSpawnRates = {2,1.8f,1.6f,1.4f,1.2f,1f};//new float[6];
+    public float[] smallChildSpawnRates;//new float[6];
     public float smallTimeInterval;
     private float x = 1;
 
     // teen enemy spawner details
     public GameObject Teenager;
-    public float[] teenagerSpawnRates = {6, 5.6f, 5.2f, 4.8f, 4.4f, 4f};// new float[6];
+    public float[] teenagerSpawnRates;// new float[6];
     public float teenTimeInterval;
     private float y = 1;
 
     // pillowsack enemy spawner details
     public GameObject PillowsackKid;
-    public float[] pillowsackSpawnRates = {10, 9f, 8f, 7f, 6f, 5f};//new float[6];
+    public float[] pillowsackSpawnRates;//new float[6];
     public float pillowsackTimeInterval;
     private float z = 1;
     public int enemyCount = 0;
