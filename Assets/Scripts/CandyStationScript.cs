@@ -9,18 +9,18 @@ public class CandyStationScript : MonoBehaviour
     private GameObject ammoPopup;
     
     // Variables that can be altered by upgrading the station
-    public float fireRate = 1;
-    public int ammo = 30;
-    public int maxAmmo = 30; 
-    public int damage = 1;
+    public float fireRate;
+    public int ammo;
+    public int maxAmmo;
+    public int damage;
     // Also targeting area but there isn't a variable for it, just resize it in editor
     // End of Variables that can be altered by upgrading the station
 
     // Variables that determine HOW MUCH BETTER the station gets by upgrading, base values + these values (USE THIS FOR BALANCING SCRIPT)
-    public float upgradeFireRate = 1;
-    public int upgradeMaxAmmo = 30;
-    public int upgradeDamage = 1;
-    public Vector3 upgradeArea = Vector3.one;
+    public float upgradeFireRate;
+    public int upgradeMaxAmmo;
+    public int upgradeDamage;
+    public Vector3 upgradeArea;
     // End of section
 
     private bool ammoShown = false;
