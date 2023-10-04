@@ -37,10 +37,13 @@ public class PauseScript : MonoBehaviour
         foreach (Transform child in GameObject.Find("StationUICanvas").transform){
             child.gameObject.SetActive(false);
         }
+        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        {
+            child.gameObject.SetActive(false);
+        }
         //AudioListener.pause = true;
         Time.timeScale = 0; 
         isPaused = true;
-        AudioListener.volume = 0;
         // Set children to be visible/invisible
         foreach (Transform child in transform)
             if(child.name != "PauseButton")
@@ -55,11 +58,14 @@ public class PauseScript : MonoBehaviour
         foreach (Transform child in GameObject.Find("StationUICanvas").transform){
             child.gameObject.SetActive(true);
         }
+        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        {
+            child.gameObject.SetActive(true);
+        }
         cancelPrompt.SetActive(false);
         //AudioListener.pause = false;
         Time.timeScale = savedTimeScale;
         isPaused = false;
-        AudioListener.volume = 1;
         // Set children to be visible/invisible
         foreach (Transform child in transform)
             if(child.name != "PauseButton")

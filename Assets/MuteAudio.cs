@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class MuteAudio : MonoBehaviour
 {
-    // public bool ismuted;
+    public GameObject musicOnButton;
+    public GameObject musicOffButton;
+    public bool muted;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (AudioListener.volume == 0)
+        {
+            musicOffButton.SetActive(true);
+            musicOnButton.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -17,15 +23,18 @@ public class MuteAudio : MonoBehaviour
       
     }
 
-    public void mute(bool muted)
+    public void unmute()
     {
-        if (muted) 
-        {
-            AudioListener.volume = 1;
-        }
-        else
-        {
-            AudioListener.volume = 0;
-        }
+        AudioListener.volume = 1;
+        musicOnButton.SetActive(true);
+        musicOffButton.SetActive(false);
+    }
+
+
+    public void mute()
+    {
+        AudioListener.volume = 0;
+        musicOffButton.SetActive(true);
+        musicOnButton.SetActive(false);
     }
 }
