@@ -8,6 +8,8 @@ public class HouseScript : MonoBehaviour
     public int HouseHP;
     Sprite currentHouseSprite; // keeps track of current sprite
     public List<Sprite> houseSpriteList = new List<Sprite>(); //element 0 is most damaged... max size entry is the starting house
+    [SerializeField] public AudioSource booAudio; 
+    [SerializeField] public AudioClip boo;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class HouseScript : MonoBehaviour
     {
         currentHouseSprite = houseSpriteList[HouseHP];
         gameObject.GetComponent<SpriteRenderer>().sprite = currentHouseSprite;
+        booAudio.PlayOneShot(boo, 0.5f);
     }
 
     IEnumerator LossState()

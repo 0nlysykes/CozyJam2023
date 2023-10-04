@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 758100650}
   - component: {fileID: 758100652}
   m_Layer: 0
-  m_Name: Music
+  m_Name: Startup Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,9 +641,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f14e8bfdac498dd4f82766090b48e582, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 015ceb153a824e04c870dbfd8aa007a8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.502
   m_Pitch: 1
   Loop: 1
   Mute: 0

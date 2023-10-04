@@ -9,6 +9,9 @@ public class EnemyScript : MonoBehaviour
     //general properties
     public Rigidbody2D rb; //grab rigid body
     public Animator animator; //grab animator
+    [SerializeField] public AudioSource enemyAudio;
+    [SerializeField] public AudioClip satisfied;
+    [SerializeField] public AudioClip scared;
 
     // Waypoints properties
     public GameObject Waypoints;
@@ -132,6 +135,7 @@ public class EnemyScript : MonoBehaviour
         {
             animator.SetBool("Sad", true);
             enemySpeed = enemySpeed * 2;
+            enemyAudio.PlayOneShot(scared, 0.5f);
         }
 
         // THIS IS PLACEHOLDER FOR THE TEEN MASK SWAP... will need to be adjusted. Other two sprites will be unnafected
@@ -143,8 +147,8 @@ public class EnemyScript : MonoBehaviour
         //check for death. Fade if health reaches 0
         if (enemyHealth <= 0 && !defeated)
         {
-            
 
+            enemyAudio.PlayOneShot(satisfied, 0.5f);
             defeated = true;
             progression = 0;
             GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);
