@@ -145,12 +145,12 @@ MonoBehaviour:
   rb: {fileID: 5292229068538705556}
   animator: {fileID: 5292229068538705577}
   enemyAudio: {fileID: 6539001171560076361}
-  satisfied: {fileID: 8300000, guid: 98c6c978b93dde34ead7c0d1f9f170c7, type: 3}
-  scared: {fileID: 8300000, guid: e38b3d0901d4e7240868fc64647985d3, type: 3}
+  satisfied: {fileID: 8300000, guid: e9de4e535fa58c5419e4b015115645a1, type: 3}
+  scared: {fileID: 8300000, guid: 2814cc70cb3164c4abbc3edd6a30a4f9, type: 3}
   Waypoints: {fileID: 0}
   DefeatedWaypoint: {fileID: 0}
   progression: 0
-  enemySpeed: 0.5
+  enemySpeed: 1
   enemyHealth: 2
   pointValue: 5
 --- !u!70 &3183732686452176546
@@ -181,7 +181,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
