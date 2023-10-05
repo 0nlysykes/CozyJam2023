@@ -23,6 +23,7 @@ public class EnemyScript : MonoBehaviour
     // 
 
     // enemy properties
+    private int maxHealth;
     public float progression = 0f;
     public float enemySpeed;
     public int enemyHealth;
@@ -47,6 +48,8 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = enemyHealth; // grab health at start for tracking
+
         //StartCoroutine(FadeTo(0, 5));
         sad = animator.GetBool("Sad");
         IsSlowed = animator.GetBool("IsSlowed");
@@ -138,11 +141,9 @@ public class EnemyScript : MonoBehaviour
             enemyAudio.PlayOneShot(scared, 0.5f);
         }
 
-        // THIS IS PLACEHOLDER FOR THE TEEN MASK SWAP... will need to be adjusted. Other two sprites will be unnafected
         bool MidState = animator.GetBool("MidState");
-        if (enemyHealth == 3)
+        if (enemyHealth == maxHealth / 2)
             animator.SetBool("MidState", !MidState);
-        // THIS IS PLACEHOLDER FOR THE TEEN MASK SWAP... will need to be adjusted. Other two sprites will be unnafected
 
         //check for death. Fade if health reaches 0
         if (enemyHealth <= 0 && !defeated)
