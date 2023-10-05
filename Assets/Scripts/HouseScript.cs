@@ -14,7 +14,7 @@ public class HouseScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHouseSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+        currentHouseSprite = gameObject.GetComponentInParent<SpriteRenderer>().sprite;
     }
 
     // collision based on tag since house can still collide with stations
@@ -41,7 +41,7 @@ public class HouseScript : MonoBehaviour
     private void HouseDamage() 
     {
         currentHouseSprite = houseSpriteList[HouseHP];
-        gameObject.GetComponent<SpriteRenderer>().sprite = currentHouseSprite;
+        gameObject.GetComponentInParent<SpriteRenderer>().sprite = currentHouseSprite;
         booAudio.PlayOneShot(boo, 0.5f);
     }
 
