@@ -1320,6 +1320,7 @@ MonoBehaviour:
   subText: {fileID: 317397571}
   pauseCanvas: {fileID: 1288298627}
   roundCounter: {fileID: 2093877374}
+  nextScene: HardLevel
   roundNum: 0
 --- !u!114 &184359661
 MonoBehaviour:

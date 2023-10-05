@@ -150,7 +150,7 @@ MonoBehaviour:
   Waypoints: {fileID: 0}
   DefeatedWaypoint: {fileID: 0}
   progression: 0
-  enemySpeed: 1
+  enemySpeed: 0.5
   enemyHealth: 2
   pointValue: 5
 --- !u!70 &3183732686452176546

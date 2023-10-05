@@ -49,6 +49,6 @@ public class HouseScript : MonoBehaviour
     {
         GameObject.Find("StationUICanvas").SetActive(false);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("LossScene");
     }
 }
