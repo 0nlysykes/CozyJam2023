@@ -42,7 +42,7 @@ public class AudioSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Application.loadedLevelName == "MainScene")
+        if (Application.loadedLevelName == "EasyLevel" || Application.loadedLevelName == "MediumLevel" || Application.loadedLevelName == "HardLevel")
         {
             Destroy(this.gameObject);
         }
