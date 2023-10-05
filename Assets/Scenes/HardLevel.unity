@@ -10773,7 +10773,8 @@ MonoBehaviour:
   bannerText: {fileID: 1344599140}
   subText: {fileID: 1067525305}
   pauseCanvas: {fileID: 1997083172}
-  roundCounter: {fileID: 0}
+  roundCounter: {fileID: 1320686630}
+  nextScene: EasyLevel
   roundNum: 0
 --- !u!114 &1379228917
 MonoBehaviour:

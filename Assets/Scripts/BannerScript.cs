@@ -10,6 +10,8 @@ public class BannerScript : MonoBehaviour
     public GameObject subText;
     public GameObject pauseCanvas;
     public GameObject roundCounter;
+
+    public string nextScene;
     public float roundNum;
     // Start is called before the first frame update
     void Start()
@@ -24,11 +26,11 @@ public class BannerScript : MonoBehaviour
     }
 
     public void mainMenu(){
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void backYard(){
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(nextScene);
     }
 
     public IEnumerator RoundEnd(float roundNumber){
@@ -46,13 +48,13 @@ public class BannerScript : MonoBehaviour
         StartCoroutine(FadeTo(1,1));
         Time.timeScale = 0;
         //------------------------------------------------------------
-        foreach (Transform child in GameObject.Find("StationUICanvas").transform){
-            child.gameObject.SetActive(false);
-        }
-        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        // foreach (Transform child in GameObject.Find("StationUICanvas").transform){
+        //     child.gameObject.SetActive(false);
+        // }
+        // foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        // {
+        //     child.gameObject.SetActive(false);
+        // }
         //------------------------------------------------------------
         float startTime = Time.realtimeSinceStartup;
         // Loop runs until 3 seconds of real time has passed
@@ -68,15 +70,15 @@ public class BannerScript : MonoBehaviour
         Time.timeScale = 1;
         roundNum = 7 - roundNumber; // keep track for loss screen
         //------------------------------------------------------------
-        foreach (Transform child in GameObject.Find("StationUICanvas").transform){
-            if(child.name != "CancelPrompt")
-                child.gameObject.SetActive(true);
-        }
-        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
-        {
+        // foreach (Transform child in GameObject.Find("StationUICanvas").transform){
+        //     if(child.name != "CancelPrompt")
+        //         child.gameObject.SetActive(true);
+        // }
+        // foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        // {
             
-            child.gameObject.SetActive(true);
-        }
+        //     child.gameObject.SetActive(true);
+        // }
         //------------------------------------------------------------
     }
 
