@@ -77,6 +77,10 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8143865642455122984, guid: 998363392bda22042b2230444d6c3352, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aa67a1e4a9fbe9e4fb8d6237f7ffd2f1, type: 3}
     - target: {fileID: 8143865642455122985, guid: 998363392bda22042b2230444d6c3352, type: 3}
       propertyPath: m_Transition
       value: 1
@@ -195,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8143865642455122991, guid: 998363392bda22042b2230444d6c3352, type: 3}
       propertyPath: m_Name
-      value: Button_Music_On Variant
+      value: Music On
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1286557981843130959, guid: 998363392bda22042b2230444d6c3352, type: 3}
