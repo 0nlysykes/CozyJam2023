@@ -138,23 +138,22 @@ public class EnemyScript : MonoBehaviour
         {
             animator.SetBool("Sad", true);
             enemySpeed = enemySpeed * 2;
-            enemyAudio.PlayOneShot(scared, 0.5f);
+            enemyAudio.PlayOneShot(scared, 1f);
         }
 
         bool MidState = animator.GetBool("MidState");
         if (enemyHealth == maxHealth / 2)
+        {
             animator.SetBool("MidState", !MidState);
-
+        }
         //check for death. Fade if health reaches 0
         if (enemyHealth <= 0 && !defeated)
         {
-
-            enemyAudio.PlayOneShot(satisfied, 0.5f);
             defeated = true;
             progression = 0;
             GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);
             GameObject.Find("EventSystem").gameObject.GetComponent<EnemySpawns>().enemyCount--;
-            StartCoroutine(FadeTo(0, 1)); //fades in five seconds
+            StartCoroutine(FadeTo(0, 2)); //fades in five seconds
         }
     }
 
