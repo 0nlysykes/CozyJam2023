@@ -26,7 +26,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void firstYard(){
         whichYard = 1;
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("EasyLevel");
     }
 
     public void secondYard()

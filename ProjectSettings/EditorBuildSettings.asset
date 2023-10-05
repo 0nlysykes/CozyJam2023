@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MediumLevel.unity
     guid: a12139336c73dc6409d9bbdc019e6e94
+  - enabled: 1
+    path: Assets/Scenes/EasyLevel.unity
+    guid: 62c38abdfe94a6244ae2d66877f5e6ef
   m_configObjects: {}
