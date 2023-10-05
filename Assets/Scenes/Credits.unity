@@ -959,7 +959,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 651015002190834414, guid: 017edfdf301c10d4c9fdc4698444af3d, type: 3}
       propertyPath: m_Name
-      value: Mute Button 1
+      value: Mute Button
       objectReference: {fileID: 0}
     - target: {fileID: 651015002190834415, guid: 017edfdf301c10d4c9fdc4698444af3d, type: 3}
       propertyPath: m_Pivot.x
@@ -1053,6 +1053,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8650302276389833078, guid: 017edfdf301c10d4c9fdc4698444af3d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aa67a1e4a9fbe9e4fb8d6237f7ffd2f1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 017edfdf301c10d4c9fdc4698444af3d, type: 3}
 --- !u!224 &1139562043 stripped
