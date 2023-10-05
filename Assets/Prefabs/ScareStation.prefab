@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6207383797615922429}
   - component: {fileID: 778801167461043498}
   - component: {fileID: 870375609449760077}
+  - component: {fileID: 4620280301488236075}
   m_Layer: 7
   m_Name: ScareStation
   m_TagString: ScareStation
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.18823424, g: 0.8490566, b: 0.19153118, a: 1}
+  m_Sprite: {fileID: 2042573246, guid: 8ef0424390d65a747853b6484590f053, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,7 +107,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.6716667, y: 0.9683333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -127,6 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a58df133f5d50046a8902ee320ed613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4620280301488236075}
+  upgradedAnimator: {fileID: 9100000, guid: 0fa5748717c3438428f1898eb37ccf44, type: 2}
+  upgradedSprite: {fileID: 1685136634, guid: c863137143e601e47b614f6a92a33369, type: 3}
   fireRate: 0.1
   scareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
   upgradeFireRate: 0.1
@@ -143,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a86cfa0f82a634495ad495c2656cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 300
-  costToUpgrade: 1000
+  cost: 50
+  costToUpgrade: 100
   isUpgraded: 0
   isEnabled: 1
   isColliding: 0
@@ -171,6 +175,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &4620280301488236075
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207383797615922401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a3581f6079a9b54a96f17bd53ab16ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6207383799076195279
 GameObject:
   m_ObjectHideFlags: 0

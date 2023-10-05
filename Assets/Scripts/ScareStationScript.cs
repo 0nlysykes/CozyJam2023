@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScareStationScript : MonoBehaviour
-{
+{   
+    public Animator animator; //grab animator
+    public RuntimeAnimatorController upgradedAnimator;
+    public Sprite upgradedSprite;
     // Variables that can be altered by upgrading the station
     public float fireRate;
     public GameObject scareBomb;
@@ -29,7 +32,7 @@ public class ScareStationScript : MonoBehaviour
     {
         timer += Time.deltaTime;
         if(timer > 1/fireRate){
-            scareAttack();
+            StartCoroutine(activationAnimation());
             timer = 0;
         }
     }
@@ -48,10 +51,18 @@ public class ScareStationScript : MonoBehaviour
         scareBomb = upgradedScareBomb;
 
         //Change look of station
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = upgradedSprite;
+        animator.runtimeAnimatorController = upgradedAnimator;
 
         //Station is now upgraded
         gameObject.GetComponent<StationUniversalProperties>().isUpgraded = true;
+    }
+
+    IEnumerator activationAnimation(){
+		scareAttack();
+        animator.SetBool("active", true);
+        yield return new WaitForSeconds(2);
+        animator.SetBool("active", false);
     }
 
     // // when the player mouses over the turret they should get to see the area of effect

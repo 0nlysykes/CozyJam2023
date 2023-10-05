@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class CandyStationScript : MonoBehaviour
 {
-
+    public Animator animator; //grab animator
+    public RuntimeAnimatorController upgradedAnimator;
+    public Sprite upgradedSprite;
     private GameObject ammoPopup;
     
     // Variables that can be altered by upgrading the station
@@ -36,6 +38,9 @@ public class CandyStationScript : MonoBehaviour
     void Start()
     {
         ammo = maxAmmo;
+        animator.SetBool("full", true);
+        animator.SetBool("halffull", false);
+        animator.SetBool("empty", false);
         ammoPopup = GameObject.Find("AmmoPopup");
     }
 
@@ -71,6 +76,15 @@ public class CandyStationScript : MonoBehaviour
         //Debug.Log(enemies.Count);
         if(currentTarget.gameObject.GetComponent<EnemyScript>().enemyHealth > 0){
             ammo -= 1;
+            if(ammo == maxAmmo/2){
+                animator.SetBool("full", false);
+                animator.SetBool("halffull", true);
+                animator.SetBool("empty", false);
+            } else if (ammo == 0){
+                animator.SetBool("full", false);
+                animator.SetBool("halffull", false);
+                animator.SetBool("empty", true);
+            }
             StartCoroutine(activationAnimation());
             currentTarget.gameObject.GetComponent<EnemyScript>().takeDamage(damage);
             timer = 0;
@@ -139,7 +153,12 @@ public class CandyStationScript : MonoBehaviour
         transform.GetChild(0).localScale += upgradeArea;
 
         //Change look of station
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0.22f, 0.75f, 0.7f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = upgradedSprite;
+        animator.runtimeAnimatorController = upgradedAnimator;
+        animator.SetBool("full", true);
+        animator.SetBool("halffull", false);
+        animator.SetBool("empty", false);
+        //gameObject.GetComponent<SpriteRenderer>().color = new Color(0.22f, 0.75f, 0.7f);
         
         //Station is now upgraded
         gameObject.GetComponent<StationUniversalProperties>().isUpgraded = true;
