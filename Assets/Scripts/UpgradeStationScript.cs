@@ -92,11 +92,13 @@ public class UpgradeStationScript : MonoBehaviour
         return PlayerCurrency.GetComponent<MoneyScript>().getValue()>=upgradeCost;
     }
 
-    private void cancelUpgrade(){
-        upgradingStation = false;
-        cancelPrompt.gameObject.SetActive(false);
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        ClosePopUp();
+    public void cancelUpgrade(){
+        if(upgradingStation){
+            upgradingStation = false;
+            cancelPrompt.gameObject.SetActive(false);
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            ClosePopUp();
+        }
     }
 
     private void FollowMouse(){

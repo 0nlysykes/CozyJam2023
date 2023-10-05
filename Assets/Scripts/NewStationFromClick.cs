@@ -65,17 +65,22 @@ public class NewStationFromClick : MonoBehaviour
             }
             //else if covers if game is paused, deleting the station if it is
         } else if(Input.GetMouseButtonDown(1)){
-            Destroy(newstation);
-            spawningStation = false;
+            CancelSpawn();
             // cancelPrompt.gameObject.SetActive(false);
             // transform.GetChild(0).gameObject.SetActive(true);
             foreach (Transform child in transform){
                 child.gameObject.SetActive(true);
             }
-            cancelPrompt.gameObject.SetActive(false);
         } else if (GameObject.Find("PauseCanvas").GetComponent<PauseScript>().isPaused){
+            CancelSpawn();
+        }
+    }
+
+    public void CancelSpawn(){
+        if(spawningStation){
             Destroy(newstation);
             spawningStation = false;
+            Debug.Log("Wood");
             cancelPrompt.gameObject.SetActive(false);
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScareBombScript : MonoBehaviour
 {
-    private Vector3 scaleChange = new Vector3(.025f, .025f, 0f);
+    private Vector3 scaleChange = new Vector3(.25f, .25f, 0f);
     public Vector2 maxScale;
     private float timer;
 
