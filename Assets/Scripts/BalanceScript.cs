@@ -116,7 +116,7 @@ public class BalanceScript : MonoBehaviour
         CandyStation.GetComponent<CandyStationScript>().maxAmmo = candyStationMaxAmmo;
         CandyStation.GetComponent<CandyStationScript>().damage = candyStationDamage;
         CandyStation.GetComponent<CandyStationScript>().upgradeFireRate = candyStationAddedFireRate;
-        CandyStation.GetComponent<CandyStationScript>().upgradeMaxAmmo = candyStationMaxAmmo;
+        CandyStation.GetComponent<CandyStationScript>().upgradeMaxAmmo = candyStationAddedMaxAmmo;
         CandyStation.GetComponent<CandyStationScript>().upgradeDamage = candyStationAddedDamage;
         CandyStation.GetComponent<CandyStationScript>().upgradeArea = candyStationAddedArea;
         CandyStation.GetComponent<StationUniversalProperties>().cost = candyStationCost;
@@ -132,6 +132,7 @@ public class BalanceScript : MonoBehaviour
         SlowStationUpgradedSlowBomb.GetComponent<SlowBombScript>().maxScale = slowStationUpgradeSizeMax;
         SlowStation.GetComponent<StationUniversalProperties>().cost = slowStationCost;
         SlowStation.GetComponent<StationUniversalProperties>().costToUpgrade = slowStationCostToUpgrade;
+        SlowStation.GetComponent<SlowStationScript>().setScale();
         //
 
         // Set Scare Station Stats/prefabs for scare bomb visuals
@@ -143,6 +144,7 @@ public class BalanceScript : MonoBehaviour
         ScareStationUpgradedScareBomb.GetComponent<ScareBombScript>().maxScale = scareStationUpgradeSizeMax;
         ScareStation.GetComponent<StationUniversalProperties>().cost = scareStationCost;
         ScareStation.GetComponent<StationUniversalProperties>().costToUpgrade = scareStationCostToUpgrade;
+        ScareStation.GetComponent<ScareStationScript>().setScale();
         //
     }
 }
