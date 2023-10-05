@@ -24,7 +24,7 @@ public class ScareStationScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        setScale();
     }
 
     // Update is called once per frame
@@ -38,7 +38,12 @@ public class ScareStationScript : MonoBehaviour
     }
 
     void scareAttack(){
-        Instantiate(scareBomb, new Vector3(transform.position.x, transform.position.y, transform.position.z+.5f), Quaternion.identity);
+        Instantiate(scareBomb, new Vector3(transform.position.x, transform.position.y, transform.position.z+.1f), Quaternion.identity);
+    }
+
+    public void setScale(){
+        Vector3 bombScale = new Vector3(scareBomb.GetComponent<ScareBombScript>().maxScale.x/ transform.localScale.x, scareBomb.GetComponent<ScareBombScript>().maxScale.y/ transform.localScale.y, 0);
+        transform.GetChild(0).transform.localScale = bombScale;
     }
 
     //Scare station upgrade increases the fire rate, and size of the scare bomb
@@ -46,10 +51,10 @@ public class ScareStationScript : MonoBehaviour
         //Faster fire rate
         fireRate += upgradeFireRate;
         //More slow
-        //bigger slowing area NOT IMPLEMENTED BECAUSE SLOW IS NOW FREEZE
         //transform.GetChild(0).localScale += upgradeArea;
         scareBomb = upgradedScareBomb;
 
+        setScale();
         //Change look of station
         gameObject.GetComponent<SpriteRenderer>().sprite = upgradedSprite;
         animator.runtimeAnimatorController = upgradedAnimator;

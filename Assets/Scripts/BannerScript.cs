@@ -48,13 +48,16 @@ public class BannerScript : MonoBehaviour
         StartCoroutine(FadeTo(1,1));
         Time.timeScale = 0;
         //------------------------------------------------------------
-        // foreach (Transform child in GameObject.Find("StationUICanvas").transform){
-        //     child.gameObject.SetActive(false);
-        // }
-        // foreach (Transform child in GameObject.Find("HUDCanvas").transform)
-        // {
-        //     child.gameObject.SetActive(false);
-        // }
+        foreach (Transform child in GameObject.Find("StationUICanvas").transform){
+            child.gameObject.SetActive(false);
+        }
+        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        GameObject.Find("StationUICanvas").GetComponent<NewStationFromClick>().CancelSpawn();
+        GameObject.Find("StationUICanvas").GetComponent<UpgradeStationScript>().cancelUpgrade();
         //------------------------------------------------------------
         float startTime = Time.realtimeSinceStartup;
         // Loop runs until 3 seconds of real time has passed
@@ -70,15 +73,15 @@ public class BannerScript : MonoBehaviour
         Time.timeScale = 1;
         roundNum = 7 - roundNumber; // keep track for loss screen
         //------------------------------------------------------------
-        // foreach (Transform child in GameObject.Find("StationUICanvas").transform){
-        //     if(child.name != "CancelPrompt")
-        //         child.gameObject.SetActive(true);
-        // }
-        // foreach (Transform child in GameObject.Find("HUDCanvas").transform)
-        // {
+        foreach (Transform child in GameObject.Find("StationUICanvas").transform){
+            if(child.name != "CancelPrompt")
+                child.gameObject.SetActive(true);
+        }
+        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        {
             
-        //     child.gameObject.SetActive(true);
-        // }
+            child.gameObject.SetActive(true);
+        }
         //------------------------------------------------------------
     }
 
@@ -116,6 +119,12 @@ public class BannerScript : MonoBehaviour
         if (newColor.a > 0 && desiredAlpha == 0)
         {
             newColor.a = 0;
+            textField.color = newColor;
+            subTextField.color = newColor;
+        }
+        if (newColor.a < 1 && desiredAlpha == 1)
+        {
+            newColor.a = 1;
             textField.color = newColor;
             subTextField.color = newColor;
         }

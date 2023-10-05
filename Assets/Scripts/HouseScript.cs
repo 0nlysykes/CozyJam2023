@@ -47,6 +47,8 @@ public class HouseScript : MonoBehaviour
 
     IEnumerator LossState()
     {
+        GameObject.Find("StationUICanvas").GetComponent<NewStationFromClick>().CancelSpawn();
+        GameObject.Find("StationUICanvas").GetComponent<UpgradeStationScript>().cancelUpgrade();
         GameObject.Find("StationUICanvas").SetActive(false);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("LossScene");

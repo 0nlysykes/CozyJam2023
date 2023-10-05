@@ -23,7 +23,7 @@ public class SlowStationScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        setScale();
     }
 
     // Update is called once per frame
@@ -37,9 +37,13 @@ public class SlowStationScript : MonoBehaviour
     }
 
     void slowAttack(){
-        Instantiate(slowBomb, new Vector3(transform.position.x, transform.position.y, transform.position.z+.5f), Quaternion.identity);
+        Instantiate(slowBomb, new Vector3(transform.position.x, transform.position.y, transform.position.z+.1f), Quaternion.identity);
     }
 
+    public void setScale(){
+        Vector3 bombScale = new Vector3(slowBomb.GetComponent<SlowBombScript>().maxScale.x/ transform.localScale.x, slowBomb.GetComponent<SlowBombScript>().maxScale.y/ transform.localScale.y, 0);
+        transform.GetChild(0).transform.localScale = bombScale;
+    }
     // Slow station upgrade increase the fire rate and slow effect severity of the slow bomb
     public void upgrade(){
         //Faster fire rate
@@ -49,6 +53,7 @@ public class SlowStationScript : MonoBehaviour
         //transform.GetChild(0).localScale += upgradeArea;
         slowBomb = upgradedSlowBomb;
 
+        setScale();
         //Change look of station
         gameObject.GetComponent<SpriteRenderer>().sprite = upgradedSprite;
         animator.runtimeAnimatorController = upgradedAnimator;
