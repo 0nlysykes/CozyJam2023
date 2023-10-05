@@ -38,10 +38,22 @@ public class BannerScript : MonoBehaviour
             roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = "1 hour until midnight";
         } else {
             subText.GetComponent<TMPro.TextMeshProUGUI>().text = (7-roundNumber).ToString() + " hours until midnight";
+            if(roundNumber == 1){
+                subText.GetComponent<TMPro.TextMeshProUGUI>().text += "\nTricks and Treats give points";
+            }
             roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = (7 - roundNumber).ToString() +" hours until midnight";
         }
         StartCoroutine(FadeTo(1,1));
         Time.timeScale = 0;
+        //------------------------------------------------------------
+        foreach (Transform child in GameObject.Find("StationUICanvas").transform){
+            child.gameObject.SetActive(false);
+        }
+        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        //------------------------------------------------------------
         float startTime = Time.realtimeSinceStartup;
         // Loop runs until 3 seconds of real time has passed
         while (Time.realtimeSinceStartup - startTime < 3)
@@ -55,6 +67,17 @@ public class BannerScript : MonoBehaviour
         StartCoroutine(FadeTo(0,1));
         Time.timeScale = 1;
         roundNum = 7 - roundNumber; // keep track for loss screen
+        //------------------------------------------------------------
+        foreach (Transform child in GameObject.Find("StationUICanvas").transform){
+            if(child.name != "CancelPrompt")
+                child.gameObject.SetActive(true);
+        }
+        foreach (Transform child in GameObject.Find("HUDCanvas").transform)
+        {
+            
+            child.gameObject.SetActive(true);
+        }
+        //------------------------------------------------------------
     }
 
     public IEnumerator Victory()
@@ -62,6 +85,7 @@ public class BannerScript : MonoBehaviour
         StartCoroutine(FadeTo(1,2));
         // Other victory animations and sounds can go here
         bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "Midnight!\nYou Win!";
+        roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = "Midnight! Great Job!";
         subText.GetComponent<TMPro.TextMeshProUGUI>().text = "";
         GameObject.Find("StationUICanvas").SetActive(false);
         yield return new WaitForSeconds(3);

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SlowStationScript : MonoBehaviour
 {
-    
-
+    public Animator animator; //grab animator
+    public RuntimeAnimatorController upgradedAnimator;
+    public Sprite upgradedSprite;
     private float timer = 3;
 
     // Variables that can be altered by upgrading the station
@@ -30,7 +31,7 @@ public class SlowStationScript : MonoBehaviour
     {
         timer += Time.deltaTime;
         if(timer > 1/fireRate){
-            slowAttack();
+            StartCoroutine(activationAnimation());
             timer = 0;
         }
     }
@@ -49,12 +50,19 @@ public class SlowStationScript : MonoBehaviour
         slowBomb = upgradedSlowBomb;
 
         //Change look of station
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.6f, 0f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = upgradedSprite;
+        animator.runtimeAnimatorController = upgradedAnimator;
 
         //Station is now upgraded
         gameObject.GetComponent<StationUniversalProperties>().isUpgraded = true;
     }
 
+    IEnumerator activationAnimation(){
+		slowAttack();
+        animator.SetBool("active", true);
+        yield return new WaitForSeconds(2);
+        animator.SetBool("active", false);
+    }
     // // when the player mouses over the turret they should get to see the area of effect
     // private void OnMouseEnter() {
     //     gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
