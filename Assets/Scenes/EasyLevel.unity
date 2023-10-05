@@ -1917,8 +1917,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240288623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0116, y: -2.8035, z: -0.09516079}
-  m_LocalScale: {x: 0.8432, y: 3.0032272, z: 1}
+  m_LocalPosition: {x: 1.0933, y: -2.8035, z: -0.09516079}
+  m_LocalScale: {x: 0.6795701, y: 3.0032272, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1579752408}
@@ -3074,33 +3074,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smallChildSpeed: 1
   smallChildHealth: 2
-  smallChildPointValue: 5
+  smallChildPointValue: 1
   smallChildSpawnRatesByRound:
   - 2
-  - 1.8
+  - 1
   - 1.6
   - 1.4
   - 1.2
-  - 1
+  - 100
   teenagerSpeed: 2
   teenagerHealth: 4
-  teenagerPointValue: 10
+  teenagerPointValue: 2
   teenagerSpawnRatesByRound:
-  - 6
-  - 5.6
+  - 100
+  - 100
   - 5.2
   - 4.8
   - 4.4
   - 4
   pillowsackSpeed: 0.5
   pillowsackHealth: 8
-  pillowsackPointValue: 15
+  pillowsackPointValue: 3
   pillowsackSpawnRatesByRound:
-  - 10
-  - 9
-  - 8
+  - 100
+  - 100
+  - 100
+  - 100
   - 7
-  - 6
   - 5
   SmallChild: {fileID: 5292229068538705554, guid: 0bda16bf4b378994dabbf0c49b38b10b, type: 3}
   Teenager: {fileID: 5292229068538705554, guid: 56ab5fb12d0f94343b3944374e742732, type: 3}
@@ -3113,8 +3113,8 @@ MonoBehaviour:
   ScareStationScareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
   ScareStationUpgradedScareBomb: {fileID: 5467841625864554826, guid: 86ae4d88e7e5a9644ae5905b046dba11, type: 3}
   candyStationFireRate: 1
-  candyStationAmmo: 30
-  candyStationMaxAmmo: 30
+  candyStationAmmo: 0
+  candyStationMaxAmmo: 60
   candyStationDamage: 1
   candyStationCost: 10
   candyStationCostToUpgrade: 30
@@ -3133,9 +3133,9 @@ MonoBehaviour:
   scareStationCost: 50
   scareStationCostToUpgrade: 100
   scareStationAddedFireRate: 0.1
-  scareStationUpgradeSizeMax: {x: 4, y: 4}
-  totalRoundTime: 20
-  startingPoints: 50
+  scareStationUpgradeSizeMax: {x: 1, y: 1}
+  totalRoundTime: 59
+  startingPoints: 100
 --- !u!114 &363177673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17208,8 +17208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959034393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8897, y: -1.2, z: -0.09516079}
-  m_LocalScale: {x: 6.707967, y: 0.78538036, z: 1}
+  m_LocalPosition: {x: -1.8897, y: -1.1331, z: -0.09516079}
+  m_LocalScale: {x: 6.707967, y: 0.65159214, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1579752408}
