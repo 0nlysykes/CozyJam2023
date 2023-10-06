@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 public class PauseScript : MonoBehaviour
 {
@@ -70,6 +71,14 @@ public class PauseScript : MonoBehaviour
         foreach (Transform child in transform)
             if(child.name != "PauseButton")
                 child.gameObject.SetActive(false);
+    }
+
+    public void retry(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void mainMenu(){
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ButtonHandler(){
