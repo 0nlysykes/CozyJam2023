@@ -18,7 +18,7 @@ public class ScareBombScript : MonoBehaviour
         }
         
         if(timer > 1f){
-            StartCoroutine(FadeTo(0, .5f));
+            StartCoroutine(FadeTo(0, 1.2f));
         }
     }
 
