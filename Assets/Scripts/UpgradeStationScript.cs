@@ -30,7 +30,7 @@ public class UpgradeStationScript : MonoBehaviour
     {
         if(upgradingStation){
             //spawningStation = false;
-            FollowMouse();
+            //FollowMouse();
             checkForClick();
         }
         if(popUpBox.activeSelf){
@@ -102,12 +102,13 @@ public class UpgradeStationScript : MonoBehaviour
         }
     }
 
-    private void FollowMouse(){
-        popUpBox.transform.position = Input.mousePosition + new Vector3(popUpBox.GetComponent<RectTransform>().rect.width/2, popUpBox.GetComponent<RectTransform>().rect.height/2, -1);
-    }
+    // private void FollowMouse(){
+    //     popUpBox.transform.position = Input.mousePosition + new Vector3(popUpBox.GetComponent<RectTransform>().rect.width/2, popUpBox.GetComponent<RectTransform>().rect.height/2, -2);
+    // }
 
     public void PopUp(string text){
         popUpBox.SetActive(true);
+        popUpBox.transform.position = Camera.main.WorldToScreenPoint(upgradeTarget.transform.position + new Vector3(upgradeTarget.GetComponent<BoxCollider2D>().bounds.size.x*1.2f, upgradeTarget.GetComponent<BoxCollider2D>().bounds.size.y*1.2f, 0)); //+ new Vector3(upgradeTarget.transform., popUpBox.GetComponent<RectTransform>().rect.height/2, -2);
         popUpBox.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = text;
     }
 
