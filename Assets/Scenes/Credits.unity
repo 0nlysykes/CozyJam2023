@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -441}
+  m_AnchoredPosition: {x: 0, y: -450}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477434222
@@ -841,8 +841,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 255}
-  m_SizeDelta: {x: 600, y: 50}
+  m_AnchoredPosition: {x: 0, y: 250}
+  m_SizeDelta: {x: 2000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995343003
 MonoBehaviour:
@@ -864,16 +864,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cassie Hobzek
+  m_text: 'Donovan Farar - Game Designer/Programmer
 
-    Donovan Farar
-
-    Jared Elliott
-
-    Miles Granger
+    Jared Elliott - Game Designer/Programmer
 
     Roman
-    Litvinov'
+    Litvninov - Artwork/Animation
+
+    Cassie Hobzek - Artwork/Animation
+
+    Miles
+    Granger - Producer/UI/UX'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4c6e1ecf5a5a2641b1ce6176b38ad27, type: 2}
   m_sharedMaterial: {fileID: 4206926971345365355, guid: e4c6e1ecf5a5a2641b1ce6176b38ad27, type: 2}
