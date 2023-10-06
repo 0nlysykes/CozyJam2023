@@ -27,6 +27,7 @@ public class MoneyScript : MonoBehaviour
         candyStationButton.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = candyCost.ToString();
         slowStationButton.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = slowCost.ToString();
         scareStationButton.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = scareCost.ToString();
+        changeValue(0);
     }
 
     // Update is called once per frame
