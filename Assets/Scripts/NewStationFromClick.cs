@@ -24,7 +24,7 @@ public class NewStationFromClick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // access balancescript to get values for candy, slow, and scare station cost
+        
     }
 
     // Update is called once per frame
@@ -65,12 +65,12 @@ public class NewStationFromClick : MonoBehaviour
             }
             //else if covers if game is paused, deleting the station if it is
         } else if(Input.GetMouseButtonDown(1)){
-            CancelSpawn();
             // cancelPrompt.gameObject.SetActive(false);
             // transform.GetChild(0).gameObject.SetActive(true);
             foreach (Transform child in transform){
                 child.gameObject.SetActive(true);
             }
+            CancelSpawn();
         } else if (GameObject.Find("PauseCanvas").GetComponent<PauseScript>().isPaused){
             CancelSpawn();
         }
@@ -80,7 +80,6 @@ public class NewStationFromClick : MonoBehaviour
         if(spawningStation){
             Destroy(newstation);
             spawningStation = false;
-            Debug.Log("Wood");
             cancelPrompt.gameObject.SetActive(false);
         }
     }
@@ -89,6 +88,7 @@ public class NewStationFromClick : MonoBehaviour
         Vector2 currentPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (CheckForValidCurrency(stationType)) // assure player has enough currency to purchase station
         {
+            cancelPrompt.GetComponent<TMPro.TextMeshProUGUI>().text = "Right Click to Cancel Placement";
             newstation = Instantiate(stationType, currentPosition, Quaternion.identity); //spawn station on the mouse
             spawningStation = true;
             disableScripts(); // deactivate the station's script's once button is pressed

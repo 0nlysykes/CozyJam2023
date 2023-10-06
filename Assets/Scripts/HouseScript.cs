@@ -20,7 +20,7 @@ public class HouseScript : MonoBehaviour
     // collision based on tag since house can still collide with stations
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" && !other.gameObject.GetComponent<EnemyScript>().defeated)
         {
             HouseHP--; // house takes damage
             if (HouseHP > 0) // check if house has HP remaining
