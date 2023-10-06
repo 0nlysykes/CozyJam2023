@@ -6179,34 +6179,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smallChildSpeed: 1
   smallChildHealth: 2
-  smallChildPointValue: 5
+  smallChildPointValue: 1
   smallChildSpawnRatesByRound:
-  - 2
-  - 1.8
+  - 2.2
+  - 1
   - 1.6
   - 1.4
   - 1.2
-  - 1
+  - 10
   teenagerSpeed: 2
   teenagerHealth: 4
-  teenagerPointValue: 10
+  teenagerPointValue: 2
   teenagerSpawnRatesByRound:
-  - 6
-  - 5.6
-  - 5.2
-  - 4.8
-  - 4.4
-  - 4
-  pillowsackSpeed: 0.5
-  pillowsackHealth: 8
-  pillowsackPointValue: 15
-  pillowsackSpawnRatesByRound:
+  - 100
   - 10
-  - 9
-  - 8
+  - 5.2
+  - 4.4
+  - 3.7
+  - 2
+  pillowsackSpeed: 0.9
+  pillowsackHealth: 6
+  pillowsackPointValue: 3
+  pillowsackSpawnRatesByRound:
+  - 100
+  - 100
+  - 10
   - 7
-  - 6
   - 5
+  - 3
   SmallChild: {fileID: 5292229068538705554, guid: 0bda16bf4b378994dabbf0c49b38b10b, type: 3}
   Teenager: {fileID: 5292229068538705554, guid: 56ab5fb12d0f94343b3944374e742732, type: 3}
   PillowsackKid: {fileID: 5292229068538705554, guid: e401ae968b829984cb8473bfd338aff7, type: 3}
@@ -6218,28 +6218,28 @@ MonoBehaviour:
   ScareStationScareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
   ScareStationUpgradedScareBomb: {fileID: 5467841625864554826, guid: 86ae4d88e7e5a9644ae5905b046dba11, type: 3}
   candyStationFireRate: 1
-  candyStationAmmo: 30
-  candyStationMaxAmmo: 30
+  candyStationAmmo: 0
+  candyStationMaxAmmo: 60
   candyStationDamage: 1
   candyStationCost: 10
-  candyStationCostToUpgrade: 30
-  candyStationAddedFireRate: 1
+  candyStationCostToUpgrade: 40
+  candyStationAddedFireRate: -0.3
   candyStationAddedMaxAmmo: 30
   candyStationAddedDamage: 1
   candyStationAddedArea: {x: 1, y: 1, z: 1}
   slowStationFireRate: 0.2
-  slowStationSizeMax: {x: 1, y: 1}
+  slowStationSizeMax: {x: 2.5, y: 2.5}
   slowStationCost: 20
   slowStationCostToUpgrade: 50
   slowStationAddedFireRate: 0.1
-  slowStationUpgradeSizeMax: {x: 2, y: 2}
-  scareStationFireRate: 0.1
-  scareStationSizeMax: {x: 0.5, y: 0.5}
-  scareStationCost: 50
-  scareStationCostToUpgrade: 100
-  scareStationAddedFireRate: 0.1
-  scareStationUpgradeSizeMax: {x: 1, y: 1}
-  totalRoundTime: 20
+  slowStationUpgradeSizeMax: {x: 5, y: 5}
+  scareStationFireRate: 0.05
+  scareStationSizeMax: {x: 2.5, y: 2.5}
+  scareStationCost: 60
+  scareStationCostToUpgrade: 120
+  scareStationAddedFireRate: 0.03
+  scareStationUpgradeSizeMax: {x: 4, y: 4}
+  totalRoundTime: 59
   startingPoints: 50
 --- !u!114 &729330811
 MonoBehaviour:
@@ -10773,7 +10773,7 @@ MonoBehaviour:
   bannerText: {fileID: 1344599140}
   subText: {fileID: 1067525305}
   pauseCanvas: {fileID: 1997083172}
-  roundCounter: {fileID: 1320686630}
+  roundCounter: {fileID: 0}
   nextScene: EasyLevel
   roundNum: 0
 --- !u!114 &1379228917
