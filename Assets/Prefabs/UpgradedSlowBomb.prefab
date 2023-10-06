@@ -118,7 +118,7 @@ MonoBehaviour:
   scaleChange: {x: 0.15, y: 0.15, z: 0}
   slowValue: 0.3
   slowDuration: 1.5
-  maxScale: {x: 2, y: 2}
+  maxScale: {x: 5, y: 5}
 --- !u!82 &6055173451264631292
 AudioSource:
   m_ObjectHideFlags: 0
@@ -131,13 +131,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 62b71fd861bbc1e4ca1118f1adcc2aa4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.337
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 238
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
