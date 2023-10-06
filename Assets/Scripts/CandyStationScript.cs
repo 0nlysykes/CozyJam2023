@@ -182,6 +182,14 @@ public class CandyStationScript : MonoBehaviour
         }
     }
 
+    private void OnDestroy() {
+        if(ammoShown){
+            ammoPopup.GetComponent<Image>().enabled = false;
+            ammoPopup.transform.GetChild(0).gameObject.SetActive(false);
+            ammoShown = false;
+        }
+    }
+
     // this coroutine is TEMPORARY, and only serves to show that the candy machine is doing something when it fires.
     //  it will be replaced with actual animation later(tm)
     IEnumerator activationAnimation(){

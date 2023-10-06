@@ -43,7 +43,8 @@ public class UpgradeStationScript : MonoBehaviour
     }
 
     public void UpgradeTime(){
-        Cursor.SetCursor(upgradeCursor, Vector2.zero, CursorMode.Auto);
+        cancelPrompt.GetComponent<TMPro.TextMeshProUGUI>().text = "Right Click to Cancel Upgrade";
+        Cursor.SetCursor(upgradeCursor, new Vector2(.5f*upgradeCursor.width, .2f*upgradeCursor.height), CursorMode.Auto);
         upgradingStation = true;
         foreach (Transform child in transform){
             child.gameObject.SetActive(false);
