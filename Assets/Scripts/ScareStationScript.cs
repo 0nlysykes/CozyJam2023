@@ -25,7 +25,7 @@ public class ScareStationScript : MonoBehaviour
     void Start()
     {
         setScale();
-        timer = 1/fireRate -1;
+        timer = 1 / fireRate - 1; 
     }
 
     // Update is called once per frame

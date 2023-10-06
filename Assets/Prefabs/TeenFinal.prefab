@@ -145,14 +145,15 @@ MonoBehaviour:
   rb: {fileID: 5292229068538705556}
   animator: {fileID: 5292229068538705577}
   enemyAudio: {fileID: 2045579191015179417}
-  satisfied: {fileID: 8300000, guid: 49a013b5d629e3d468bf6c3877ebbc74, type: 3}
+  satisfied: {fileID: 0}
   scared: {fileID: 8300000, guid: c08016bfa27bff740ad3ad64c5b0f4f0, type: 3}
   Waypoints: {fileID: 0}
   DefeatedWaypoint: {fileID: 0}
   progression: 0
   enemySpeed: 2
   enemyHealth: 4
-  pointValue: 10
+  pointValue: 2
+  defeated: 0
 --- !u!70 &3029239883526943963
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
