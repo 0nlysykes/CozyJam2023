@@ -18,13 +18,14 @@ public class ScareStationScript : MonoBehaviour
     //public Vector3 upgradeArea = Vector3.one;
     // End of section
 
-    private float timer = 5;
+    private float timer = 20;
     
 
     // Start is called before the first frame update
     void Start()
     {
         setScale();
+        timer = 1/fireRate -1;
     }
 
     // Update is called once per frame

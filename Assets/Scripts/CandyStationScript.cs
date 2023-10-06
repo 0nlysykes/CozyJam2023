@@ -74,20 +74,22 @@ public class CandyStationScript : MonoBehaviour
         //  -sound plays?
         //  -if child is satisfied short particle effect, sound effect, and child walks off the path and fades out
         //Debug.Log(enemies.Count);
-        if(currentTarget.gameObject.GetComponent<EnemyScript>().enemyHealth > 0){
-            ammo -= 1;
-            if(ammo == maxAmmo/2){
-                animator.SetBool("full", false);
-                animator.SetBool("halffull", true);
-                animator.SetBool("empty", false);
-            } else if (ammo == 0){
-                animator.SetBool("full", false);
-                animator.SetBool("halffull", false);
-                animator.SetBool("empty", true);
+        if(currentTarget != null){
+            if(currentTarget.gameObject.GetComponent<EnemyScript>().enemyHealth > 0){
+                ammo -= 1;
+                if(ammo == maxAmmo/2){
+                    animator.SetBool("full", false);
+                    animator.SetBool("halffull", true);
+                    animator.SetBool("empty", false);
+                } else if (ammo == 0){
+                    animator.SetBool("full", false);
+                    animator.SetBool("halffull", false);
+                    animator.SetBool("empty", true);
+                }
+                StartCoroutine(activationAnimation());
+                currentTarget.gameObject.GetComponent<EnemyScript>().takeDamage(damage);
+                timer = 0;
             }
-            StartCoroutine(activationAnimation());
-            currentTarget.gameObject.GetComponent<EnemyScript>().takeDamage(damage);
-            timer = 0;
         }
     }
 

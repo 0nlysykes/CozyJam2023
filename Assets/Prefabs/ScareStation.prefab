@@ -131,9 +131,9 @@ MonoBehaviour:
   animator: {fileID: 4620280301488236075}
   upgradedAnimator: {fileID: 9100000, guid: 0fa5748717c3438428f1898eb37ccf44, type: 2}
   upgradedSprite: {fileID: 1685136634, guid: c863137143e601e47b614f6a92a33369, type: 3}
-  fireRate: 0.1
+  fireRate: 0.05
   scareBomb: {fileID: 991779773159028918, guid: 438774a5e88a04f469622ba35414de66, type: 3}
-  upgradeFireRate: 0.1
+  upgradeFireRate: 0.03
   upgradedScareBomb: {fileID: 5467841625864554826, guid: 86ae4d88e7e5a9644ae5905b046dba11, type: 3}
 --- !u!114 &778801167461043498
 MonoBehaviour:
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a86cfa0f82a634495ad495c2656cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 50
-  costToUpgrade: 100
+  cost: 60
+  costToUpgrade: 120
   isUpgraded: 0
   isEnabled: 1
   isColliding: 0
@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 6207383799076195279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.1}
-  m_LocalScale: {x: 0.66330594, y: 0.69156295, z: 0}
+  m_LocalScale: {x: 3.3165298, y: 3.4578147, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6207383797615922428}
