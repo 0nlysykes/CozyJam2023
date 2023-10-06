@@ -2464,7 +2464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 4eade859acaaaa64aa5d5e2fc5867f16, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3153,8 +3153,8 @@ MonoBehaviour:
   smallChildHealth: 2
   smallChildPointValue: 1
   smallChildSpawnRatesByRound:
-  - 2.2
-  - 1
+  - 2
+  - 1.2
   - 1.6
   - 1.4
   - 1.2
@@ -3193,7 +3193,7 @@ MonoBehaviour:
   candyStationAmmo: 0
   candyStationMaxAmmo: 60
   candyStationDamage: 1
-  candyStationCost: 10
+  candyStationCost: 20
   candyStationCostToUpgrade: 40
   candyStationAddedFireRate: -0.3
   candyStationAddedMaxAmmo: 30
@@ -3201,18 +3201,18 @@ MonoBehaviour:
   candyStationAddedArea: {x: 1, y: 1, z: 1}
   slowStationFireRate: 0.2
   slowStationSizeMax: {x: 2.5, y: 2.5}
-  slowStationCost: 20
+  slowStationCost: 30
   slowStationCostToUpgrade: 50
   slowStationAddedFireRate: 0.1
   slowStationUpgradeSizeMax: {x: 5, y: 5}
   scareStationFireRate: 0.05
   scareStationSizeMax: {x: 2.5, y: 2.5}
   scareStationCost: 60
-  scareStationCostToUpgrade: 120
+  scareStationCostToUpgrade: 60
   scareStationAddedFireRate: 0.03
   scareStationUpgradeSizeMax: {x: 4, y: 4}
   totalRoundTime: 59
-  startingPoints: 50
+  startingPoints: 59
 --- !u!114 &363177673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3743,7 +3743,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 4eade859acaaaa64aa5d5e2fc5867f16, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9055,10 +9055,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Backyard
+  m_text: Next Level
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e4c6e1ecf5a5a2641b1ce6176b38ad27, type: 2}
+  m_sharedMaterial: {fileID: 4206926971345365355, guid: e4c6e1ecf5a5a2641b1ce6176b38ad27, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15311,8 +15311,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e4c6e1ecf5a5a2641b1ce6176b38ad27, type: 2}
+  m_sharedMaterial: {fileID: 4206926971345365355, guid: e4c6e1ecf5a5a2641b1ce6176b38ad27, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
