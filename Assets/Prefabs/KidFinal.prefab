@@ -152,7 +152,7 @@ MonoBehaviour:
   progression: 0
   enemySpeed: 1
   enemyHealth: 2
-  pointValue: 5
+  pointValue: 1
 --- !u!70 &3183732686452176546
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
