@@ -28,8 +28,9 @@ public class EnemyScript : MonoBehaviour
     public float enemySpeed;
     public int enemyHealth;
     public int pointValue;
+    private float maxSpeed;
     private bool slowed = false;
-    private bool defeated = false;
+    public bool defeated = false;
     bool sad;
 
     bool IsSlowed;
@@ -49,6 +50,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         maxHealth = enemyHealth; // grab health at start for tracking
+        maxSpeed = enemySpeed;
 
         //StartCoroutine(FadeTo(0, 5));
         sad = animator.GetBool("Sad");
@@ -149,6 +151,9 @@ public class EnemyScript : MonoBehaviour
         //check for death. Fade if health reaches 0
         if (enemyHealth <= 0 && !defeated)
         {
+            if(enemyHealth >= -10){
+                enemyAudio.PlayOneShot(satisfied, 1f);
+            }
             defeated = true;
             progression = 0;
             GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);
@@ -181,11 +186,12 @@ public class EnemyScript : MonoBehaviour
 
     IEnumerator SlowCoroutine(float slowValue, float slowDuration)
     {
-        
+        float speedDifference = 0;
         if (!slowed)
         {
             animator.SetBool("Sad", !sad);
             animator.SetBool("IsSlowed", !IsSlowed);
+            speedDifference = enemySpeed - (enemySpeed*slowValue);
             enemySpeed = enemySpeed * slowValue;
             slowed = true;
         }
@@ -194,7 +200,10 @@ public class EnemyScript : MonoBehaviour
         {
             animator.SetBool("Sad", sad);
             animator.SetBool("IsSlowed", IsSlowed);
-            enemySpeed = enemySpeed / slowValue;
+            enemySpeed += speedDifference;
+            if(enemySpeed > maxSpeed){
+                enemySpeed = maxSpeed;
+            }
             slowed = false;
         }
     }

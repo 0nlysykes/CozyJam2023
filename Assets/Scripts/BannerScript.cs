@@ -58,6 +58,7 @@ public class BannerScript : MonoBehaviour
 
         GameObject.Find("StationUICanvas").GetComponent<NewStationFromClick>().CancelSpawn();
         GameObject.Find("StationUICanvas").GetComponent<UpgradeStationScript>().cancelUpgrade();
+        GameObject.Find("StationUICanvas").GetComponent<DestroyStation>().cancelDestroy();
         //------------------------------------------------------------
         float startTime = Time.realtimeSinceStartup;
         // Loop runs until 3 seconds of real time has passed
@@ -89,9 +90,9 @@ public class BannerScript : MonoBehaviour
     {
         StartCoroutine(FadeTo(1,2));
         // Other victory animations and sounds can go here
-        bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "Midnight!\nYou Win!";
+        bannerText.GetComponent<TMPro.TextMeshProUGUI>().text = "12:00 AM";
         roundCounter.GetComponent<TMPro.TextMeshProUGUI>().text = "Midnight! Great Job!";
-        subText.GetComponent<TMPro.TextMeshProUGUI>().text = "";
+        subText.GetComponent<TMPro.TextMeshProUGUI>().text = "You Win!";
         GameObject.Find("StationUICanvas").SetActive(false);
         yield return new WaitForSeconds(3);
         foreach(Transform child in bannerText.transform){

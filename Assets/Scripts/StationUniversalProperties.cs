@@ -48,6 +48,8 @@ public class StationUniversalProperties : MonoBehaviour
         if(upgradeObject.GetComponent<UpgradeStationScript>().upgradingStation && !isUpgraded){
             upgradeObject.GetComponent<UpgradeStationScript>().upgradeTarget = gameObject;
             upgradeObject.GetComponent<UpgradeStationScript>().PopUp("Cost to Upgrade: " + costToUpgrade);
+        } else if(upgradeObject.GetComponent<DestroyStation>().destroyingStation){
+            upgradeObject.GetComponent<DestroyStation>().destroyTarget = gameObject;
         } else {
             gameObject.transform.Find("TargetingRange").gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
