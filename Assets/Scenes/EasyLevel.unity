@@ -3773,7 +3773,7 @@ MonoBehaviour:
   candyStationAmmo: 0
   candyStationMaxAmmo: 60
   candyStationDamage: 1
-  candyStationCost: 20
+  candyStationCost: 10
   candyStationCostToUpgrade: 40
   candyStationAddedFireRate: -0.3
   candyStationAddedMaxAmmo: 30
@@ -3781,18 +3781,18 @@ MonoBehaviour:
   candyStationAddedArea: {x: 1, y: 1, z: 1}
   slowStationFireRate: 0.2
   slowStationSizeMax: {x: 2.5, y: 2.5}
-  slowStationCost: 30
+  slowStationCost: 20
   slowStationCostToUpgrade: 50
   slowStationAddedFireRate: 0.1
   slowStationUpgradeSizeMax: {x: 5, y: 5}
   scareStationFireRate: 0.05
   scareStationSizeMax: {x: 2.5, y: 2.5}
-  scareStationCost: 60
+  scareStationCost: 40
   scareStationCostToUpgrade: 60
   scareStationAddedFireRate: 0.03
   scareStationUpgradeSizeMax: {x: 4, y: 4}
   totalRoundTime: 59
-  startingPoints: 59
+  startingPoints: 50
 --- !u!114 &363177673
 MonoBehaviour:
   m_ObjectHideFlags: 0
