@@ -151,9 +151,9 @@ public class EnemyScript : MonoBehaviour
         //check for death. Fade if health reaches 0
         if (enemyHealth <= 0 && !defeated)
         {
-            if(enemyHealth >= -10){
-                enemyAudio.PlayOneShot(satisfied, 1f);
-            }
+            //if(enemyHealth >= -10){
+            //    enemyAudio.PlayOneShot(satisfied, 1f);
+            //}
             defeated = true;
             progression = 0;
             GameObject.Find("PlayerCurrency").GetComponent<MoneyScript>().changeValue(pointValue);
