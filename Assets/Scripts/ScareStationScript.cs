@@ -60,6 +60,7 @@ public class ScareStationScript : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = upgradedSprite;
         animator.runtimeAnimatorController = upgradedAnimator;
 
+        timer = 20;
         //Station is now upgraded
         gameObject.GetComponent<StationUniversalProperties>().isUpgraded = true;
     }
